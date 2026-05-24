@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const images = Array.from({ length: 19 }, (_, i) => `${import.meta.env.BASE_URL}carousel/${i + 1}.png`);
+const images = Array.from({ length: 19 }, (_, i) => `${import.meta.env.BASE_URL}carousel/${i + 1}.webp`);
 const doubled = [...images, ...images];
 
 export function ImageCarousel() {

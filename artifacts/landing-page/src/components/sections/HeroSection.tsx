@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import productImage from "@assets/APOSTILA_3000X3000_(3)_1779637984168.png";
+const productImage = `${import.meta.env.BASE_URL}product.webp`;
 
 const tickerItems = [
   "+250 ideias prontas para copiar",
@@ -35,6 +35,10 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.2, ease: "easeOut" }}
             className="w-full max-w-lg mx-auto rounded-2xl"
+            width={800}
+            height={800}
+            fetchPriority="high"
+            decoding="sync"
           />
 
           <p className="font-sans font-light text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
