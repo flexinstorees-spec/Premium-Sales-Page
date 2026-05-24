@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import { TopBar } from "@/components/sections/TopBar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { DiscoverSection } from "@/components/sections/DiscoverSection";
+import { ImageCarousel } from "@/components/sections/ImageCarousel";
 import { StepByStepSection } from "@/components/sections/StepByStepSection";
 import { CountdownTimer } from "@/components/sections/CountdownTimer";
 import { CTASection } from "@/components/sections/CTASection";
@@ -24,6 +25,7 @@ function Home() {
       <div className="pt-9">
         <HeroSection />
         <DiscoverSection />
+        <ImageCarousel />
         <StepByStepSection />
         <CountdownTimer />
         <CTASection />
