@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Clock } from "lucide-react";
 
 const TOTAL_SECONDS = 15 * 60;
 
@@ -29,56 +30,115 @@ export function CountdownTimer() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full flex justify-center px-4 py-6"
+      className="w-full px-4 py-6"
     >
       <div
-        className="w-full max-w-sm flex flex-col items-center gap-3 px-6 py-5 rounded-2xl"
+        className="w-full max-w-lg mx-auto rounded-2xl overflow-hidden"
         style={{
-          background: "#fdf8f5",
-          border: "1px solid #ad674b22",
-          boxShadow: "0 4px 20px 0 rgba(173,103,75,0.10)",
+          boxShadow: "0 8px 40px 0 rgba(173,103,75,0.22), 0 2px 8px 0 rgba(0,0,0,0.06)",
         }}
       >
-        <p
-          className="font-sans text-xs font-medium tracking-widest uppercase text-center"
-          style={{ color: "#a0826d" }}
+        {/* Header strip */}
+        <div
+          className="flex items-center justify-center gap-2 px-4 py-3"
+          style={{ background: "linear-gradient(135deg, #ad674b, #c89566)" }}
         >
-          Oferta promocional disponível por tempo limitado
-        </p>
-
-        {expired ? (
-          <p
-            className="font-sans font-semibold text-base"
-            style={{ color: "#c0392b" }}
-          >
-            Oferta encerrando
+          <Clock className="w-3.5 h-3.5 text-white/90" />
+          <p className="font-sans font-semibold text-white text-xs tracking-widest uppercase">
+            Oferta promocional por tempo limitado
           </p>
-        ) : (
-          <motion.p
-            key={seconds}
-            animate={{ scale: [1, 1.04, 1] }}
-            transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="font-sans font-bold tabular-nums"
-            style={{
-              fontSize: "clamp(2.2rem, 10vw, 3rem)",
-              letterSpacing: "0.08em",
-              color: "#c0392b",
-              lineHeight: 1,
-            }}
-          >
-            {pad(mins)}:{pad(secs)}
-          </motion.p>
-        )}
+        </div>
 
-        <p
-          className="font-sans font-light text-xs text-center"
-          style={{ color: "#b0907a" }}
+        {/* Body */}
+        <div
+          className="flex flex-col items-center gap-4 px-6 py-7"
+          style={{ background: "linear-gradient(180deg, #fff8f4 0%, #fff 100%)" }}
         >
-          Esse valor promocional pode sair do ar a qualquer momento.
-        </p>
+          {expired ? (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="font-sans font-bold text-xl tracking-wide"
+              style={{ color: "#c0392b" }}
+            >
+              ⚠ Oferta encerrando
+            </motion.p>
+          ) : (
+            <div className="flex items-center gap-3">
+              {/* Minutes */}
+              <div className="flex flex-col items-center">
+                <motion.div
+                  key={mins}
+                  initial={{ opacity: 0.6, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.25 }}
+                  className="flex items-center justify-center rounded-xl w-20 h-20 sm:w-24 sm:h-24"
+                  style={{
+                    background: "linear-gradient(145deg, #fff, #fdf0e8)",
+                    border: "1.5px solid #ad674b33",
+                    boxShadow: "0 2px 12px rgba(173,103,75,0.12)",
+                  }}
+                >
+                  <span
+                    className="font-sans font-extrabold tabular-nums leading-none"
+                    style={{ fontSize: "clamp(2rem, 8vw, 2.75rem)", color: "#c0392b" }}
+                  >
+                    {pad(mins)}
+                  </span>
+                </motion.div>
+                <span className="font-sans text-xs text-muted-foreground mt-1.5 tracking-wider uppercase" style={{ color: "#a0826d" }}>
+                  min
+                </span>
+              </div>
+
+              {/* Separator */}
+              <motion.span
+                animate={{ opacity: [1, 0.2, 1] }}
+                transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+                className="font-sans font-bold pb-5"
+                style={{ fontSize: "2rem", color: "#c0392b" }}
+              >
+                :
+              </motion.span>
+
+              {/* Seconds */}
+              <div className="flex flex-col items-center">
+                <motion.div
+                  key={secs}
+                  initial={{ opacity: 0.6, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.25 }}
+                  className="flex items-center justify-center rounded-xl w-20 h-20 sm:w-24 sm:h-24"
+                  style={{
+                    background: "linear-gradient(145deg, #fff, #fdf0e8)",
+                    border: "1.5px solid #ad674b33",
+                    boxShadow: "0 2px 12px rgba(173,103,75,0.12)",
+                  }}
+                >
+                  <span
+                    className="font-sans font-extrabold tabular-nums leading-none"
+                    style={{ fontSize: "clamp(2rem, 8vw, 2.75rem)", color: "#c0392b" }}
+                  >
+                    {pad(secs)}
+                  </span>
+                </motion.div>
+                <span className="font-sans text-xs mt-1.5 tracking-wider uppercase" style={{ color: "#a0826d" }}>
+                  seg
+                </span>
+              </div>
+            </div>
+          )}
+
+          <p
+            className="font-sans font-light text-sm text-center"
+            style={{ color: "#a0826d" }}
+          >
+            Esse valor promocional pode sair do ar a qualquer momento.
+          </p>
+        </div>
       </div>
     </motion.div>
   );
