@@ -1,0 +1,61 @@
+import { Switch, Route, Router as WouterRouter } from "wouter";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "@/components/ui/toaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import NotFound from "@/pages/not-found";
+
+import { HeroSection } from "@/components/sections/HeroSection";
+import { SocialProofBar } from "@/components/sections/SocialProofBar";
+import { ProblemSection } from "@/components/sections/ProblemSection";
+import { SolutionSection } from "@/components/sections/SolutionSection";
+import { BenefitsSection } from "@/components/sections/BenefitsSection";
+import { WhatYouGetSection } from "@/components/sections/WhatYouGetSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { ForWhomSection } from "@/components/sections/ForWhomSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { Footer } from "@/components/sections/Footer";
+
+const queryClient = new QueryClient();
+
+function Home() {
+  return (
+    <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
+      <HeroSection />
+      <SocialProofBar />
+      <ProblemSection />
+      <SolutionSection />
+      <BenefitsSection />
+      <WhatYouGetSection />
+      <TestimonialsSection />
+      <ForWhomSection />
+      <CTASection />
+      <FAQSection />
+      <Footer />
+    </div>
+  );
+}
+
+function Router() {
+  return (
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route component={NotFound} />
+    </Switch>
+  );
+}
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <Router />
+        </WouterRouter>
+        <Toaster />
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}
+
+export default App;
