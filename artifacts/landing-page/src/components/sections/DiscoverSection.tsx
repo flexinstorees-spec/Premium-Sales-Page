@@ -27,19 +27,6 @@ export function DiscoverSection() {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center gap-6"
         >
-          <h2 className="font-sans font-bold text-2xl sm:text-3xl md:text-4xl text-foreground leading-snug">
-            Descubra Mais de 250 Ideias Prontas de Cerâmica Fria para Copiar e Criar Hoje Mesmo
-          </h2>
-
-          <p className="font-sans font-light text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Com esse material, você vai ter acesso a uma biblioteca completa com modelos prontos de cerâmica fria.
-          </p>
-
-          <p className="font-sans text-muted-foreground font-light text-sm sm:text-base text-center">
-            Sem precisar saber desenhar. Sem complicação. Sem curso caro.{" "}
-            <span className="font-medium text-foreground">Simples assim.</span>
-          </p>
-
           <div className="w-full">
             <p className="font-sans font-semibold text-foreground text-lg sm:text-xl mb-2 text-left">
               +250 Ideias Prontas de Cerâmica Fria
