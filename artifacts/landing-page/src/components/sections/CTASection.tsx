@@ -7,43 +7,39 @@ export function CTASection() {
     <SectionWrapper className="relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
 
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
+      <div className="relative z-10 max-w-xl mx-auto text-center">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-card p-10 md:p-16 rounded-[3rem] shadow-sm border border-border"
+          className="bg-card p-8 sm:p-12 rounded-3xl shadow-sm border border-border flex flex-col items-center gap-6"
         >
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
-            Oferta Especial Hoje
-          </h2>
-
-          <p className="text-lg md:text-xl text-muted-foreground font-light mb-10 max-w-xl mx-auto">
-            Acesse uma biblioteca completa com mais de 250 ideias prontas de cerâmica fria e comece a criar agora mesmo.
+          <p className="font-sans font-light text-muted-foreground text-base">
+            OFERTA ESPECIAL HOJE
           </p>
 
-          <div className="flex flex-col items-center justify-center mb-10">
-            <span className="text-muted-foreground line-through text-lg mb-2">De R$ 97,00 por apenas</span>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-medium text-primary font-sans">R$</span>
-              <span className="text-7xl md:text-8xl font-serif text-primary leading-none">10</span>
-              <span className="text-3xl font-medium text-primary font-sans">,00</span>
+          <div className="flex flex-col items-center gap-1">
+            <span className="font-sans text-muted-foreground line-through text-base">DE R$ 97,00 POR APENAS:</span>
+            <div className="flex items-baseline gap-1 mt-1">
+              <span className="font-sans font-semibold text-primary text-2xl">R$</span>
+              <span className="font-sans font-bold text-primary text-7xl sm:text-8xl leading-none">10</span>
+              <span className="font-sans font-semibold text-primary text-2xl">,00</span>
             </div>
-            <span className="text-muted-foreground text-sm mt-3 font-light">à vista — acesso imediato</span>
+            <span className="font-sans font-light text-muted-foreground text-sm">à vista</span>
           </div>
 
           <button
             data-testid="button-main-cta"
-            className="group relative w-full sm:w-auto min-w-[300px] min-h-[64px] px-10 py-5 bg-primary text-primary-foreground font-medium rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:bg-primary/90 active:scale-[0.98] shadow-xl shadow-primary/20 mb-6"
+            className="group flex items-center justify-center w-full min-h-[60px] px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full transition-all duration-300 hover:scale-[1.02] hover:bg-primary/90 active:scale-[0.98] shadow-xl shadow-primary/20 text-base"
           >
-            <span className="relative z-10 text-lg">QUERO ACESSAR AGORA</span>
-            <ArrowRight className="relative z-10 ml-2 w-5 h-5 inline-block transition-transform group-hover:translate-x-1" />
+            QUERO ACESSAR AGORA
+            <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
           </button>
 
-          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <ShieldCheck className="w-4 h-4 text-green-500/80" />
-            <span>Compra 100% segura — 7 dias de garantia incondicional</span>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground font-light">
+            <ShieldCheck className="w-4 h-4 text-green-500/80 shrink-0" />
+            <span>Compra 100% segura — 7 dias de garantia</span>
           </div>
         </motion.div>
       </div>

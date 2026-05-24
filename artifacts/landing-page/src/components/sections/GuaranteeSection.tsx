@@ -9,23 +9,28 @@ export function GuaranteeSection() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="max-w-2xl mx-auto text-center"
+        transition={{ duration: 0.6 }}
+        className="max-w-xl mx-auto text-center flex flex-col items-center gap-6"
       >
-        <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-8">
-          <ShieldCheck className="w-10 h-10 text-primary" strokeWidth={1.5} />
+        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+          <ShieldCheck className="w-8 h-8 text-primary" strokeWidth={1.5} />
         </div>
 
-        <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-          Garantia de 7 Dias
+        <h2 className="font-sans font-bold text-2xl sm:text-3xl text-foreground">
+          GARANTIA DE 7 DIAS
         </h2>
 
-        <p className="text-muted-foreground text-lg font-light leading-relaxed">
-          Você pode acessar o material completo e testar sem nenhum risco. Se achar que o conteúdo não é para você, basta pedir o reembolso dentro de 7 dias.
-        </p>
-
-        <p className="text-muted-foreground text-lg font-light leading-relaxed mt-4">
-          Simples assim.
-        </p>
+        <div className="space-y-3">
+          <p className="font-sans font-light text-muted-foreground text-base sm:text-lg leading-relaxed">
+            Você pode acessar o material completo e testar sem risco.
+          </p>
+          <p className="font-sans font-light text-muted-foreground text-base sm:text-lg leading-relaxed">
+            Se achar que o conteúdo não é para você, basta pedir reembolso dentro de 7 dias.
+          </p>
+          <p className="font-sans font-medium text-foreground text-base sm:text-lg">
+            Simples assim.
+          </p>
+        </div>
       </motion.div>
     </SectionWrapper>
   );

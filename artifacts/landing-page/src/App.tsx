@@ -5,13 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
 import { HeroSection } from "@/components/sections/HeroSection";
-import { SocialProofBar } from "@/components/sections/SocialProofBar";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { SolutionSection } from "@/components/sections/SolutionSection";
-import { BenefitsSection } from "@/components/sections/BenefitsSection";
-import { WhatYouGetSection } from "@/components/sections/WhatYouGetSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { ForWhomSection } from "@/components/sections/ForWhomSection";
+import { DiscoverSection } from "@/components/sections/DiscoverSection";
+import { StepByStepSection } from "@/components/sections/StepByStepSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { GuaranteeSection } from "@/components/sections/GuaranteeSection";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -23,13 +18,8 @@ function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
       <HeroSection />
-      <SocialProofBar />
-      <ProblemSection />
-      <SolutionSection />
-      <BenefitsSection />
-      <WhatYouGetSection />
-      <TestimonialsSection />
-      <ForWhomSection />
+      <DiscoverSection />
+      <StepByStepSection />
       <CTASection />
       <GuaranteeSection />
       <FAQSection />
