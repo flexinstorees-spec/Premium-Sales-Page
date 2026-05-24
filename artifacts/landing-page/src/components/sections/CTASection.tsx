@@ -4,16 +4,14 @@ import { SectionWrapper } from "../ui/SectionWrapper";
 
 export function CTASection() {
   return (
-    <SectionWrapper className="relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
-
-      <div className="relative z-10 max-w-xl mx-auto text-center">
+    <SectionWrapper>
+      <div className="max-w-xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-card p-8 sm:p-12 rounded-3xl shadow-sm border border-border flex flex-col items-center gap-6"
+          className="flex flex-col items-center gap-6"
         >
           <p className="font-sans font-light text-muted-foreground text-base">
             OFERTA ESPECIAL HOJE

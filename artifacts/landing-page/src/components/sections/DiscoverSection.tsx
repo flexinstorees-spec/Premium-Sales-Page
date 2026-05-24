@@ -18,14 +18,14 @@ const ideas = [
 
 export function DiscoverSection() {
   return (
-    <SectionWrapper className="bg-card">
+    <SectionWrapper>
       <div className="max-w-2xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center gap-8"
+          className="flex flex-col items-center gap-6"
         >
           <h2 className="font-sans font-bold text-2xl sm:text-3xl md:text-4xl text-foreground leading-snug">
             DESCUBRA MAIS DE 250 IDEIAS PRONTAS DE CERÂMICA FRIA PARA COPIAR E CRIAR HOJE MESMO
@@ -35,7 +35,7 @@ export function DiscoverSection() {
             Com esse material, você vai ter acesso a uma biblioteca completa com modelos prontos de cerâmica fria.
           </p>
 
-          <div className="w-full bg-background rounded-3xl border border-border p-8 sm:p-10 shadow-sm text-left space-y-2">
+          <div className="w-full text-left space-y-2">
             <p className="font-sans text-muted-foreground font-light text-sm sm:text-base mb-6">
               Sem precisar saber desenhar. Sem complicação. Sem curso caro.{" "}
               <span className="font-medium text-foreground">Simples assim.</span>

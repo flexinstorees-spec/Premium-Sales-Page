@@ -29,7 +29,7 @@ export function StepByStepSection() {
             Cada ideia acompanha:
           </p>
 
-          <div className="w-full bg-card rounded-3xl border border-border p-8 sm:p-10 shadow-sm">
+          <div className="w-full">
             <div className="flex flex-col gap-5">
               {steps.map((step, i) => (
                 <motion.div
@@ -48,7 +48,7 @@ export function StepByStepSection() {
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-border space-y-2 text-center">
+            <div className="mt-6 space-y-1 text-center">
               <p className="font-sans font-light text-muted-foreground text-base">
                 Tudo de forma prática e fácil de entender.
               </p>

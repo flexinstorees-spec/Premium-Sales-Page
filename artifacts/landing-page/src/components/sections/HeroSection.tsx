@@ -3,8 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full min-h-[92vh] flex items-center justify-center pt-16 pb-16 px-4 overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative w-full min-h-[80vh] flex items-center justify-center pt-12 pb-10 px-4 overflow-hidden">
 
       <div className="relative z-10 w-full max-w-2xl mx-auto text-center">
         <motion.div

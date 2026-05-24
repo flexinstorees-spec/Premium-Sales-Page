@@ -7,31 +7,25 @@ interface SectionWrapperProps {
   className?: string;
   containerClassName?: string;
   id?: string;
-  noPadding?: boolean;
 }
 
-export function SectionWrapper({ 
-  children, 
-  className, 
-  containerClassName, 
+export function SectionWrapper({
+  children,
+  className,
+  containerClassName,
   id,
-  noPadding = false 
 }: SectionWrapperProps) {
   return (
-    <section 
-      id={id} 
-      className={cn(
-        "w-full relative overflow-hidden", 
-        !noPadding && "py-16 md:py-24",
-        className
-      )}
+    <section
+      id={id}
+      className={cn("w-full relative overflow-hidden py-10 md:py-14", className)}
     >
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className={cn("container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl", containerClassName)}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className={cn("container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl", containerClassName)}
       >
         {children}
       </motion.div>
