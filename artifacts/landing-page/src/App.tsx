@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { DiscoverSection } from "@/components/sections/DiscoverSection";
 import { StepByStepSection } from "@/components/sections/StepByStepSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { GuaranteeSection } from "@/components/sections/GuaranteeSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { Footer } from "@/components/sections/Footer";
@@ -24,6 +25,7 @@ function Home() {
         <DiscoverSection />
         <StepByStepSection />
         <CTASection />
+        <TestimonialsSection />
         <GuaranteeSection />
         <FAQSection />
         <Footer />
