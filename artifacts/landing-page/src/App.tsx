@@ -8,6 +8,7 @@ import { TopBar } from "@/components/sections/TopBar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { DiscoverSection } from "@/components/sections/DiscoverSection";
 import { StepByStepSection } from "@/components/sections/StepByStepSection";
+import { CountdownTimer } from "@/components/sections/CountdownTimer";
 import { CTASection } from "@/components/sections/CTASection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { GuaranteeSection } from "@/components/sections/GuaranteeSection";
@@ -24,6 +25,7 @@ function Home() {
         <HeroSection />
         <DiscoverSection />
         <StepByStepSection />
+        <CountdownTimer />
         <CTASection />
         <TestimonialsSection />
         <GuaranteeSection />
