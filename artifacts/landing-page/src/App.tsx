@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { DiscoverSection } from "@/components/sections/DiscoverSection";
 import { StepByStepSection } from "@/components/sections/StepByStepSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { CountdownSection } from "@/components/sections/CountdownSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { GuaranteeSection } from "@/components/sections/GuaranteeSection";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -24,6 +25,7 @@ function Home() {
         <HeroSection />
         <DiscoverSection />
         <StepByStepSection />
+        <CountdownSection />
         <CTASection />
         <TestimonialsSection />
         <GuaranteeSection />
