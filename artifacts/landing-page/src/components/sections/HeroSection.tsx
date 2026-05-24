@@ -13,7 +13,7 @@ export function HeroSection() {
           className="flex flex-col items-center gap-6"
         >
           <h1 className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl leading-tight text-foreground">
-            +250 IDEIAS DE CERÂMICA FRIA PARA INICIANTES e ARTESÃS
+            +250 Ideias de cerâmica fria para iniciantes e artesãs
           </h1>
 
           <p className="font-sans font-light text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">

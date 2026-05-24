@@ -17,7 +17,7 @@ export function GuaranteeSection() {
         </div>
 
         <h2 className="font-sans font-bold text-2xl sm:text-3xl text-foreground">
-          GARANTIA DE 7 DIAS
+          Garantia de 7 dias
         </h2>
 
         <div className="space-y-3">

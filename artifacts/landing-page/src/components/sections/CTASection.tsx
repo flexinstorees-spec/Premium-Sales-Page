@@ -26,7 +26,7 @@ export function CTASection() {
           {/* Header do card */}
           <div className="bg-primary/8 px-6 py-5 text-center border-b border-border">
             <p className="font-sans font-semibold text-foreground text-base tracking-wide">
-              OFERTA ESPECIAL HOJE
+              Oferta especial hoje
             </p>
           </div>
 

@@ -28,7 +28,7 @@ export function DiscoverSection() {
           className="flex flex-col items-center gap-6"
         >
           <h2 className="font-sans font-bold text-2xl sm:text-3xl md:text-4xl text-foreground leading-snug">
-            DESCUBRA MAIS DE 250 IDEIAS PRONTAS DE CERÂMICA FRIA PARA COPIAR E CRIAR HOJE MESMO
+            Descubra mais de 250 ideias prontas de cerâmica fria para copiar e criar hoje mesmo
           </h2>
 
           <p className="font-sans font-light text-base sm:text-lg text-muted-foreground leading-relaxed">

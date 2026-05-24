@@ -22,7 +22,7 @@ export function StepByStepSection() {
           className="flex flex-col items-center gap-8"
         >
           <h2 className="font-sans font-bold text-2xl sm:text-3xl md:text-4xl text-foreground leading-snug">
-            PASSO A PASSO SIMPLES E DIRETO
+            Passo a passo simples e direto
           </h2>
 
           <p className="font-sans font-light text-base sm:text-lg text-muted-foreground">
