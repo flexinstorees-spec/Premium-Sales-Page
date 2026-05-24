@@ -13,6 +13,7 @@ import { WhatYouGetSection } from "@/components/sections/WhatYouGetSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ForWhomSection } from "@/components/sections/ForWhomSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { GuaranteeSection } from "@/components/sections/GuaranteeSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { Footer } from "@/components/sections/Footer";
 
@@ -30,6 +31,7 @@ function Home() {
       <TestimonialsSection />
       <ForWhomSection />
       <CTASection />
+      <GuaranteeSection />
       <FAQSection />
       <Footer />
     </div>

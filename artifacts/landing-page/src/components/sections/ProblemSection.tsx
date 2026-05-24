@@ -1,23 +1,23 @@
 import { motion } from "framer-motion";
-import { Clock, BatteryWarning, BrainCircuit } from "lucide-react";
+import { HelpCircle, DollarSign, Frown } from "lucide-react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 
 export function ProblemSection() {
   const problems = [
     {
-      icon: Clock,
-      title: "Atrasada para a vida",
-      desc: "Você acorda cansada, corre o dia todo e, quando a noite chega, sente que não fez nada de importante para você."
+      icon: HelpCircle,
+      title: "Sem ideia do que criar",
+      desc: "Você tem vontade de trabalhar com cerâmica fria, mas trava na hora de decidir o que fazer. A inspiração some exatamente quando você mais precisa."
     },
     {
-      icon: BatteryWarning,
-      title: "Exaustão constante",
-      desc: "Sua mente não desliga. Uma lista infinita de tarefas rouba sua energia e te impede de estar presente nos momentos bons."
+      icon: DollarSign,
+      title: "Cursos caros demais",
+      desc: "Quer aprender, mas não quer gastar centenas de reais em um curso longo. Você precisa de referências prontas, não de mais teoria."
     },
     {
-      icon: BrainCircuit,
-      title: "Desconexão de si mesma",
-      desc: "No meio de tantas responsabilidades e cuidados com os outros, você esqueceu do que te faz sorrir de verdade."
+      icon: Frown,
+      title: "Medo de começar errada",
+      desc: "Parece que todo mundo já sabe o que está fazendo menos você. Você quer resultados bonitos desde a primeira peça, mas não sabe por onde começar."
     }
   ];
 
@@ -25,10 +25,10 @@ export function ProblemSection() {
     <SectionWrapper>
       <div className="text-center max-w-2xl mx-auto mb-16 px-4">
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 leading-tight">
-          Parece que você está sempre tentando equilibrar pratos que não param de cair?
+          Você quer criar, mas algo sempre te trava?
         </h2>
         <p className="text-muted-foreground text-lg md:text-xl font-light">
-          Muitas mulheres vivem nesse ciclo de exaustão, acreditando que a culpa é delas por não darem conta de tudo. Mas não precisa ser assim.
+          Muitas iniciantes e artesãs vivem essa frustração — não é falta de talento, é falta de referência. E a gente resolve isso agora.
         </p>
       </div>
 

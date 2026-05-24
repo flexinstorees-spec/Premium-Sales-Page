@@ -52,7 +52,7 @@ const AccordionContent = forwardRef<HTMLDivElement, { children: ReactNode; class
       {...props}
       ref={forwardedRef}
     >
-      <div className={cn("pb-6 pt-0", className)}>{children}</div>
+      <div className={cn("pb-6 pt-0 leading-relaxed", className)}>{children}</div>
     </Accordion.Content>
   )
 );
@@ -61,28 +61,28 @@ AccordionContent.displayName = "AccordionContent";
 export function FAQSection() {
   const faqs = [
     {
-      q: "Como recebo o acesso ao curso?",
-      a: "Assim que o pagamento for confirmado, você receberá um e-mail com seus dados de login e senha para acessar a plataforma exclusiva de alunas."
+      q: "Como vou receber o material?",
+      a: "O acesso chega imediatamente no seu e-mail após a confirmação da compra. Você não precisa esperar nada — é acesso na hora."
     },
     {
-      q: "Por quanto tempo terei acesso ao material?",
-      a: "O acesso ao Método Lumina é vitalício. Isso significa que você pode assistir no seu tempo, quantas vezes quiser, e ainda receberá todas as atualizações futuras."
-    },
-    {
-      q: "E se eu não gostar do método?",
-      a: "Você tem 7 dias de garantia incondicional. Se assistir às aulas e achar que o método não é para você, basta enviar um e-mail que devolveremos 100% do seu dinheiro, sem burocracia."
-    },
-    {
-      q: "Preciso comprar materiais caros para aplicar?",
-      a: "De jeito nenhum! O Método Lumina foi pensado para ser acessível. Um simples caderno e uma caneta já são suficientes para colocar tudo em prática."
-    },
-    {
-      q: "Não tenho muito tempo. Vou conseguir fazer?",
-      a: "O curso foi criado exatamente para quem não tem tempo! As aulas são curtas (10 a 15 minutos) e o método requer apenas de 10 a 15 minutos do seu dia para ser aplicado."
+      q: "Preciso ter experiência com cerâmica fria?",
+      a: "Não. O material foi criado especialmente para iniciantes. Cada ideia é apresentada de forma simples, com passo a passo fácil de entender do zero."
     },
     {
       q: "Posso acessar pelo celular?",
-      a: "Sim, a plataforma é 100% responsiva. Você pode assistir às aulas pelo celular, tablet ou computador, de onde estiver."
+      a: "Sim. Você pode acessar de qualquer dispositivo — celular, tablet ou computador. O material funciona em todos eles."
+    },
+    {
+      q: "E se eu não gostar do material?",
+      a: "Você pode acessar o material completo e testar sem nenhum risco. Se achar que o conteúdo não é para você, basta pedir o reembolso dentro de 7 dias. Simples assim, sem burocracia."
+    },
+    {
+      q: "Preciso saber desenhar para criar as peças?",
+      a: "Não precisa saber desenhar nada. O material traz referências visuais prontas para você copiar e adaptar — você só precisa seguir o modelo."
+    },
+    {
+      q: "Quantas ideias estão incluídas?",
+      a: "São mais de 250 ideias prontas de cerâmica fria, cobrindo vasinhos, miniaturas, porta-velas, bandejas, decorações minimalistas, peças virais do TikTok e muito mais."
     }
   ];
 

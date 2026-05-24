@@ -5,19 +5,19 @@ import { SectionWrapper } from "../ui/SectionWrapper";
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Mariana S.",
-      role: "Mãe e Empreendedora",
-      quote: "Eu achava que precisava de mais horas no dia. O Lumina me mostrou que eu só precisava de mais intenção nas horas que já tenho. Mudou minha vida."
+      name: "Ana Clara M.",
+      role: "Iniciante em cerâmica fria",
+      quote: "Eu travava toda vez que ia começar uma peça. Com esse material, abri na ideia de vasinho, segui o passo a passo e o resultado ficou lindo. Nunca imaginei que ficaria assim na primeira vez."
     },
     {
-      name: "Camila T.",
-      role: "Designer",
-      quote: "O primeiro método que não me fez sentir culpada. A abordagem é tão gentil que as mudanças aconteceram quase sem eu perceber. Meu ambiente de trabalho é outro."
+      name: "Fernanda L.",
+      role: "Artesã há 2 anos",
+      quote: "Comprei mais como curiosidade e fiquei impressionada. São 250 ideias de verdade, organizadas e com referência visual. Minha produção praticamente dobrou de volume de inspiração."
     },
     {
       name: "Juliana R.",
-      role: "Arquiteta",
-      quote: "Estava a um passo do burnout. As pausas restauradoras ensinadas no módulo 3 salvaram minha saúde mental este ano. Recomendo de olhos fechados."
+      role: "Vende peças pelo Instagram",
+      quote: "Achei que seria mais do mesmo, mas não. As ideias são atuais, com aquele estilo aesthetic que vende muito. Já criei 3 peças novas essa semana e postei — voltaram a me perguntar onde comprar."
     }
   ];
 
@@ -25,7 +25,7 @@ export function TestimonialsSection() {
     <SectionWrapper>
       <div className="text-center max-w-2xl mx-auto mb-16 px-4">
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-          Histórias de quem já transformou sua rotina
+          Quem já acessou está criando peças lindas
         </h2>
       </div>
 
@@ -44,11 +44,11 @@ export function TestimonialsSection() {
                 <Star key={star} className="w-4 h-4 fill-current" />
               ))}
             </div>
-            
+
             <p className="font-serif text-lg md:text-xl italic text-foreground mb-8 flex-grow leading-relaxed">
               "{testimonial.quote}"
             </p>
-            
+
             <div className="mt-auto">
               <p className="font-medium text-foreground text-lg">{testimonial.name}</p>
               <p className="text-sm text-muted-foreground font-light">{testimonial.role}</p>

@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
-import { Star, Users, Award } from "lucide-react";
+import { Layers, ShieldCheck, Smartphone, Sparkles } from "lucide-react";
 
 export function SocialProofBar() {
   const stats = [
-    { icon: Users, value: "+5.000", label: "Alunas transformadas" },
-    { icon: Star, value: "4.9/5", label: "Avaliação média" },
-    { icon: Award, value: "100%", label: "Garantia de satisfação" }
+    { icon: Layers, value: "+250", label: "Ideias prontas para copiar" },
+    { icon: ShieldCheck, value: "7 dias", label: "Garantia de reembolso" },
+    { icon: Smartphone, value: "100%", label: "Acessível pelo celular" },
+    { icon: Sparkles, value: "Zero", label: "Experiência necessária" },
   ];
 
   return (
     <section className="w-full py-12 border-y border-border/60 bg-background/50 relative z-10">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16 lg:gap-24">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-12 lg:gap-20">
           {stats.map((stat, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}

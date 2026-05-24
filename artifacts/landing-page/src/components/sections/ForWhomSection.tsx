@@ -4,17 +4,17 @@ import { SectionWrapper } from "../ui/SectionWrapper";
 
 export function ForWhomSection() {
   const isForYou = [
-    "Sente que está sempre apagando incêndios.",
-    "Deseja uma rotina mais leve e com propósito.",
-    "Busca organização sem métodos rígidos e irreais.",
-    "Quer aprender a descansar sem culpa."
+    "Você quer começar com cerâmica fria mas não sabe o que criar.",
+    "Quer referências visuais prontas para copiar e adaptar.",
+    "Procura algo prático, sem enrolação e sem curso caro.",
+    "Ama estética Pinterest e TikTok e quer criar peças nesse estilo.",
+    "Quer criar peças para vender ou decorar a sua casa."
   ];
 
   const notForYou = [
-    "Quer uma pílula mágica ou atalhos milagrosos.",
-    "Prefere sistemas de produtividade extremos.",
-    "Não está disposta a dedicar 15 minutos por dia.",
-    "Acredita que descansar é perda de tempo."
+    "Você já é especialista e procura técnicas avançadas.",
+    "Quer um curso em vídeo com aulas longas.",
+    "Não tem interesse em criar peças físicas de cerâmica fria.",
   ];
 
   return (
