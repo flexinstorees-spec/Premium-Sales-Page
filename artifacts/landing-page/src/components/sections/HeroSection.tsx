@@ -45,13 +45,14 @@ export function HeroSection() {
             Aprenda a criar peças lindas, aesthetic e profissionais mesmo começando do zero!
           </p>
 
-          <button
+          <a
+            href="#oferta"
             data-testid="button-hero-cta"
             className="group flex items-center justify-center w-full sm:w-auto min-h-[56px] px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full transition-all duration-300 hover:scale-[1.02] hover:bg-primary/90 active:scale-[0.98] shadow-lg shadow-primary/20 text-base mt-2"
           >
             QUERO ACESSAR AGORA
             <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </button>
+          </a>
         </motion.div>
       </div>
 

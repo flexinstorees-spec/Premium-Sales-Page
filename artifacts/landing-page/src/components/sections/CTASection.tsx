@@ -14,7 +14,7 @@ const deliverables = [
 
 export function CTASection() {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="oferta">
       <div className="max-w-xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.97, y: 16 }}
