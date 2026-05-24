@@ -47,7 +47,7 @@ export function CountdownTimer() {
           style={{ background: "linear-gradient(135deg, #e8700a, #f59132)" }}
         >
           <Clock className="w-3.5 h-3.5 text-white/90" />
-          <p className="font-sans font-semibold text-white text-xs tracking-widest uppercase">
+          <p className="font-sans font-semibold text-white text-xs tracking-widest uppercase text-center">
             Oferta promocional por tempo limitado
           </p>
         </div>
