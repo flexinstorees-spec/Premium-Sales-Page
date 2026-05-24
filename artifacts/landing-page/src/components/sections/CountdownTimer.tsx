@@ -44,7 +44,7 @@ export function CountdownTimer() {
         {/* Header strip */}
         <div
           className="flex items-center justify-center gap-2 px-4 py-3"
-          style={{ background: "linear-gradient(135deg, #ad674b, #c89566)" }}
+          style={{ background: "linear-gradient(135deg, #e8700a, #f59132)" }}
         >
           <Clock className="w-3.5 h-3.5 text-white/90" />
           <p className="font-sans font-semibold text-white text-xs tracking-widest uppercase">
