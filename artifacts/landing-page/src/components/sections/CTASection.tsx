@@ -4,10 +4,10 @@ import { SectionWrapper } from "../ui/SectionWrapper";
 
 const deliverables = [
   "+250 moldes prontos de cerâmica fria",
+  "Passo a passo fácil de seguir",
   "Lista de materiais de cada peça",
   "Explicação simples e direta",
   "Referência visual para cada ideia",
-  "Passo a passo fácil de seguir",
   "Dicas de acabamento profissional",
   "Acesso imediato pelo celular",
 ];
