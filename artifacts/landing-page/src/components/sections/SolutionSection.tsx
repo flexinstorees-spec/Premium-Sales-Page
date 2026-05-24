@@ -31,7 +31,7 @@ export function SolutionSection() {
           </h2>
           <div className="space-y-6 text-lg text-muted-foreground font-light leading-relaxed">
             <p>
-              Com mais de 250 ideias prontas de cerâmica fria, você nunca mais vai travar na frente da argila sem saber o que fazer.
+              Com mais de 250 moldes prontos de cerâmica fria, você nunca mais vai travar na frente da argila sem saber o que fazer.
             </p>
             <p>
               Cada ideia é apresentada de forma simples e visual, com passo a passo fácil de entender — mesmo que você esteja começando agora.

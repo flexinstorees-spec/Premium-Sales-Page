@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 const productImage = `${import.meta.env.BASE_URL}product.webp`;
 
 const tickerItems = [
-  "+250 ideias prontas para copiar",
+  "+250 moldes prontos para copiar",
   "Sem precisar saber desenhar",
   "Passo a passo simples e direto",
   "Vasinhos, miniaturas e muito mais",

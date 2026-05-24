@@ -4,7 +4,7 @@ import { SectionWrapper } from "../ui/SectionWrapper";
 
 export function WhatYouGetSection() {
   const items = [
-    "+250 ideias prontas de cerâmica fria para copiar e criar hoje mesmo.",
+    "+250 moldes prontos de cerâmica fria para copiar e criar hoje mesmo.",
     "Lista de materiais necessários para cada peça — sem surpresas.",
     "Explicação simples e direta em linguagem de iniciante.",
     "Referência visual para cada ideia — você sabe exatamente o resultado antes de começar.",

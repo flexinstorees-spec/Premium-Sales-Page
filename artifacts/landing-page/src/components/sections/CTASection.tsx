@@ -3,7 +3,7 @@ import { ArrowRight, ShieldCheck, Check, Sparkles } from "lucide-react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 
 const deliverables = [
-  "+250 ideias prontas de cerâmica fria",
+  "+250 moldes prontos de cerâmica fria",
   "Lista de materiais de cada peça",
   "Explicação simples e direta",
   "Referência visual para cada ideia",

@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     q: "Eu vou aprender mesmo sem saber desenhar?",
-    a: "Sim. As ideias acompanham referências visuais e explicações simples para você apenas seguir e criar suas peças.",
+    a: "Sim. Os moldes acompanham referências visuais e explicações simples para você apenas seguir e criar suas peças.",
   },
   {
     q: "O material é em vídeo ou PDF?",
