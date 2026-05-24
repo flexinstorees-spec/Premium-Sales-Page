@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Flower2, Star, Layers, Flame, LayoutGrid, TrendingUp, Bookmark, Sparkles, Gem, Copy, Plus } from "lucide-react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 
 const ideas = [
-  "Vasinhos aesthetic",
-  "Miniaturas fofas",
-  "Decorações minimalistas",
-  "Porta-velas",
-  "Bandejas decorativas",
-  "Peças virais do TikTok",
-  "Decorações estilo Pinterest",
-  "Peças modernas",
-  "Modelos elegantes",
-  "Peças fáceis de copiar",
-  "Muito mais...",
+  { label: "Vasinhos aesthetic", icon: Flower2 },
+  { label: "Miniaturas fofas", icon: Star },
+  { label: "Decorações minimalistas", icon: Layers },
+  { label: "Porta-velas", icon: Flame },
+  { label: "Bandejas decorativas", icon: LayoutGrid },
+  { label: "Peças virais do TikTok", icon: TrendingUp },
+  { label: "Decorações estilo Pinterest", icon: Bookmark },
+  { label: "Peças modernas", icon: Sparkles },
+  { label: "Modelos elegantes", icon: Gem },
+  { label: "Peças fáceis de copiar", icon: Copy },
+  { label: "Muito mais...", icon: Plus },
 ];
 
 export function DiscoverSection() {
@@ -35,32 +35,31 @@ export function DiscoverSection() {
             Com esse material, você vai ter acesso a uma biblioteca completa com modelos prontos de cerâmica fria.
           </p>
 
-          <div className="w-full text-left space-y-2">
-            <p className="font-sans text-muted-foreground font-light text-sm sm:text-base mb-6">
-              Sem precisar saber desenhar. Sem complicação. Sem curso caro.{" "}
-              <span className="font-medium text-foreground">Simples assim.</span>
-            </p>
+          <p className="font-sans text-muted-foreground font-light text-sm sm:text-base text-center">
+            Sem precisar saber desenhar. Sem complicação. Sem curso caro.{" "}
+            <span className="font-medium text-foreground">Simples assim.</span>
+          </p>
 
-            <p className="font-sans font-semibold text-foreground text-lg sm:text-xl mb-4">
+          <div className="w-full">
+            <p className="font-sans font-semibold text-foreground text-lg sm:text-xl mb-2 text-left">
               +250 Ideias Prontas de Cerâmica Fria
             </p>
+            <p className="font-sans font-light text-muted-foreground text-sm mb-5 text-left">Aprenda a criar:</p>
 
-            <p className="font-sans font-light text-muted-foreground text-sm mb-4">Aprenda a criar:</p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3">
               {ideas.map((idea, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: -8 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: i * 0.05 }}
-                  className="flex items-center gap-3"
+                  transition={{ duration: 0.3, delay: i * 0.04 }}
+                  className="flex items-center gap-3 bg-card border border-border rounded-2xl px-4 py-3 hover:-translate-y-0.5 transition-transform duration-200"
                 >
-                  <div className="w-6 h-6 shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Check className="w-3.5 h-3.5 text-primary" strokeWidth={2.5} />
+                  <div className="w-8 h-8 shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
+                    <idea.icon className="w-4 h-4 text-primary" strokeWidth={1.75} />
                   </div>
-                  <span className="font-sans font-light text-foreground text-sm sm:text-base">{idea}</span>
+                  <span className="font-sans font-light text-foreground text-sm sm:text-base leading-snug">{idea.label}</span>
                 </motion.div>
               ))}
             </div>
