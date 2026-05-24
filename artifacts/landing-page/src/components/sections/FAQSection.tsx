@@ -79,7 +79,7 @@ export function FAQSection() {
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="font-sans font-bold text-2xl sm:text-3xl text-foreground">
-            Dúvidas frequentes
+            Dúvidas Frequentes
           </h2>
         </div>
 
