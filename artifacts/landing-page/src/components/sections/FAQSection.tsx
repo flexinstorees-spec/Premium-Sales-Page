@@ -60,16 +60,20 @@ AccordionContent.displayName = "AccordionContent";
 
 const faqs = [
   {
-    q: "Vou receber como?",
-    a: "O acesso chega imediatamente no seu e-mail após a compra.",
+    q: "Preciso ter experiência com cerâmica fria?",
+    a: "Não. O material foi criado justamente para iniciantes que querem começar do zero de forma simples e prática.",
   },
   {
-    q: "Preciso ter experiência?",
-    a: "Não. O material foi feito para iniciantes.",
+    q: "Eu vou aprender mesmo sem saber desenhar?",
+    a: "Sim. As ideias acompanham referências visuais e explicações simples para você apenas seguir e criar suas peças.",
   },
   {
-    q: "Posso acessar pelo celular?",
-    a: "Sim. Você pode acessar de qualquer dispositivo.",
+    q: "O material é em vídeo ou PDF?",
+    a: "O material é digital e contém passo a passo visual organizado de forma simples e fácil de acompanhar.",
+  },
+  {
+    q: "Vou conseguir fazer as peças pelo celular?",
+    a: "Sim. Você pode acessar todo o material pelo celular, tablet ou computador.",
   },
 ];
 
