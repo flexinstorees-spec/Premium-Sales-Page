@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import productImage from "@assets/APOSTILA_3000X3000_(3)_1779637984168.png";
 
 export function HeroSection() {
   return (
@@ -15,6 +16,15 @@ export function HeroSection() {
           <h1 className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl leading-tight text-foreground">
             +250 Ideias de Cerâmica Fria para Iniciantes e Artesãs
           </h1>
+
+          <motion.img
+            src={productImage}
+            alt="+250 Ideias de Cerâmica Fria"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.2, ease: "easeOut" }}
+            className="w-full max-w-lg mx-auto rounded-2xl"
+          />
 
           <p className="font-sans font-light text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
             Aprenda a criar peças lindas, aesthetic e profissionais mesmo começando do zero!
