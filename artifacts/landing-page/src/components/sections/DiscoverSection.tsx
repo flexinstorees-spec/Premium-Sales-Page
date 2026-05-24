@@ -41,7 +41,7 @@ export function DiscoverSection() {
               <span className="font-medium text-foreground">Simples assim.</span>
             </p>
 
-            <p className="font-sans font-semibold text-foreground text-base mb-4">
+            <p className="font-sans font-semibold text-foreground text-lg sm:text-xl mb-4">
               +250 Ideias Prontas de Cerâmica Fria
             </p>
 
