@@ -76,7 +76,7 @@ export function CTASection() {
 
             <div className="flex items-center gap-2 text-sm text-muted-foreground font-light">
               <ShieldCheck className="w-4 h-4 text-green-500/80 shrink-0" />
-              <span>Compra 100% segura — 7 dias de garantia</span>
+              <span>Compra 100% segura </span>
             </div>
           </div>
         </motion.div>
