@@ -132,12 +132,6 @@ export function CountdownTimer() {
             </div>
           )}
 
-          <p
-            className="font-sans font-light text-sm text-center"
-            style={{ color: "#a0826d" }}
-          >
-            Esse valor promocional pode sair do ar a qualquer momento.
-          </p>
         </div>
       </div>
     </motion.div>
