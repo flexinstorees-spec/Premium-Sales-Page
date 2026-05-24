@@ -25,7 +25,7 @@ export function TopBar() {
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           className="font-sans font-medium text-white text-xs sm:text-sm text-center leading-tight tracking-wide"
         >
-          ⚠️ DESCONTO EXCLUSIVO HOJE — Válido somente até {date}
+          DESCONTO EXCLUSIVO HOJE {date}
         </motion.p>
       </div>
     </motion.div>
