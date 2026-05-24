@@ -82,14 +82,15 @@ export function CTASection() {
           >
             {/* Price block */}
             <div className="flex flex-col items-center gap-1.5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide"
-                style={{ background: "#ad674b15", color: "#ad674b" }}>
-                DE R$ 97,00 POR APENAS
+              <div className="flex items-center gap-2">
+                <span className="font-sans text-base font-medium text-muted-foreground">De</span>
+                <span className="font-sans text-xl font-bold line-through" style={{ color: "#ad674b99" }}>R$ 97,00</span>
+                <span className="font-sans text-base font-medium text-muted-foreground">por apenas</span>
               </div>
               <div className="flex items-baseline gap-1 mt-1">
-                <span className="font-sans font-bold text-2xl" style={{ color: "#ad674b" }}>R$</span>
-                <span className="font-sans font-extrabold leading-none" style={{ color: "#ad674b", fontSize: "clamp(5rem,20vw,7rem)" }}>10</span>
-                <span className="font-sans font-bold text-2xl" style={{ color: "#ad674b" }}>,00</span>
+                <span className="font-sans font-bold text-2xl" style={{ color: "#4a8e58" }}>R$</span>
+                <span className="font-sans font-extrabold leading-none" style={{ color: "#4a8e58", fontSize: "clamp(5rem,20vw,7rem)" }}>10</span>
+                <span className="font-sans font-bold text-2xl" style={{ color: "#4a8e58" }}>,00</span>
               </div>
               <span className="font-sans font-light text-muted-foreground text-sm">à vista • acesso imediato</span>
             </div>
