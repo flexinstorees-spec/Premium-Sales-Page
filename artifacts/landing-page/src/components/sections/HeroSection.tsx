@@ -1,12 +1,23 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import productImage from "@assets/APOSTILA_3000X3000_(3)_1779637984168.png";
+
+const tickerItems = [
+  "+250 ideias prontas para copiar",
+  "Sem precisar saber desenhar",
+  "Passo a passo simples e direto",
+  "Vasinhos, miniaturas e muito mais",
+  "Acesso imediato pelo celular",
+  "Garantia de 7 dias",
+];
+
+const allItems = [...tickerItems, ...tickerItems];
 
 export function HeroSection() {
   return (
-    <section className="relative w-full min-h-[80vh] flex items-center justify-center pt-12 pb-10 px-4 overflow-hidden">
+    <section className="relative w-full min-h-[80vh] flex flex-col items-center justify-center pt-12 pb-10 overflow-hidden">
 
-      <div className="relative z-10 w-full max-w-2xl mx-auto text-center">
+      <div className="relative z-10 w-full max-w-2xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,13 +48,31 @@ export function HeroSection() {
             QUERO ACESSAR AGORA
             <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
           </button>
-
-          <p className="text-sm text-muted-foreground flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-green-500/80 shrink-0" />
-            Acesso imediato após a compra
-          </p>
         </motion.div>
       </div>
+
+      {/* Ticker full-width */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="w-full mt-8"
+      >
+        <div className="ticker-viewport w-full">
+          <div className="ticker-track">
+            {allItems.map((item, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-2.5 px-5 py-3 bg-white border border-border rounded-xl shadow-sm font-sans text-sm font-medium text-foreground whitespace-nowrap flex-shrink-0"
+              >
+                <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
     </section>
   );
 }

@@ -1,0 +1,67 @@
+HTML:
+
+<!-- Adicione no <head> se ainda não tiver o Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<!-- Carrossel -->
+<div class="vticker-wrapper">
+  <div class="vticker-viewport">
+    <div class="vticker-track">
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> +350 dinâmicas prontas para usar</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Separadas por série e habilidade</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Planejador semanal integrado</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Acompanhamento de turmas</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Acesso pelo celular, tablet ou PC</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Atualizações incluídas gratuitamente</div>
+      <!-- Duplicados para o loop infinito funcionar -->
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> +350 dinâmicas prontas para usar</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Separadas por série e habilidade</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Planejador semanal integrado</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Acompanhamento de turmas</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Acesso pelo celular, tablet ou PC</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Atualizações incluídas gratuitamente</div>
+    </div>
+  </div>
+</div>
+
+CSS:
+
+.vticker-wrapper {
+  width: 100%;
+  margin: 28px 0 0;
+}
+.vticker-viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.vticker-track {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: max-content;
+  animation: ticker-h 20s linear infinite;
+}
+.vticker-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  border: 1px solid #e9ecef;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.vticker-item i {
+  color: #A855F7;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+@keyframes ticker-h {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
