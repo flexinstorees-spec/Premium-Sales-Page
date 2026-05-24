@@ -3,7 +3,7 @@ import { Layers, ShieldCheck, Smartphone, Sparkles } from "lucide-react";
 
 export function SocialProofBar() {
   const stats = [
-    { icon: Layers, value: "+250", label: "Ideias prontas para copiar" },
+    { icon: Layers, value: "+250", label: "Moldes prontos para copiar" },
     { icon: ShieldCheck, value: "7 dias", label: "Garantia de reembolso" },
     { icon: Smartphone, value: "100%", label: "Acessível pelo celular" },
     { icon: Sparkles, value: "Zero", label: "Experiência necessária" },

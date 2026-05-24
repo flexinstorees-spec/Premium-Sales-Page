@@ -28,7 +28,7 @@ export function DiscoverSection() {
           className="flex flex-col items-center gap-6"
         >
           <h2 className="font-sans font-bold text-2xl sm:text-3xl md:text-4xl text-foreground leading-snug text-center">
-            +250 Ideias Prontas de Cerâmica Fria
+            +250 Moldes Prontos de Cerâmica Fria
           </h2>
 
           <div className="w-full">

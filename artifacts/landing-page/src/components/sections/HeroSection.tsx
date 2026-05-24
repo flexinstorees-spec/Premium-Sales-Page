@@ -25,12 +25,12 @@ export function HeroSection() {
           className="flex flex-col items-center gap-6"
         >
           <h1 className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl leading-tight text-foreground">
-            <span style={{ color: "#ad674b" }}>+250 Ideias de Cerâmica Fria</span> para Iniciantes e Artesãs
+            <span style={{ color: "#ad674b" }}>+250 Moldes de Cerâmica Fria</span> para Iniciantes e Artesãs
           </h1>
 
           <motion.img
             src={productImage}
-            alt="+250 Ideias de Cerâmica Fria"
+            alt="+250 Moldes de Cerâmica Fria"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.2, ease: "easeOut" }}
