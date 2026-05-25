@@ -13,9 +13,9 @@ const deliverables = [
 ];
 
 const bonuses = [
-  { label: "Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria", image: "/bonus1.png", price: "R$ 47,00" },
-  { label: "Bônus 02 — Lista Secreta de Fornecedores", image: "/bonus2.png", price: "R$ 37,00" },
-  { label: "Bônus 03 — O Truque das Peças Perfeitas", image: "/bonus3.png", price: "R$ 37,00" },
+  { label: "Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria", image: "/bonus1.webp", price: "R$ 47,00" },
+  { label: "Bônus 02 — Lista Secreta de Fornecedores", image: "/bonus2.webp", price: "R$ 37,00" },
+  { label: "Bônus 03 — O Truque das Peças Perfeitas", image: "/bonus3.webp", price: "R$ 37,00" },
 ];
 
 export function CTASection() {

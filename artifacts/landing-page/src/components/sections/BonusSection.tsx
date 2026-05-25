@@ -4,21 +4,21 @@ import { SectionWrapper } from "../ui/SectionWrapper";
 const bonuses = [
   {
     number: "01",
-    image: "/bonus1.png",
+    image: "/bonus1.webp",
     originalPrice: "R$ 47,00",
     description:
       "Aprenda o passo a passo completo para criar sua primeira peça mesmo sem experiência. Do zero ao acabamento final de forma simples, prática e fácil de seguir.",
   },
   {
     number: "02",
-    image: "/bonus2.png",
+    image: "/bonus2.webp",
     originalPrice: "R$ 37,00",
     description:
       "Descubra onde comprar materiais baratos, bonitos e de qualidade sem perder tempo procurando na internet. Tudo organizado para facilitar sua rotina.",
   },
   {
     number: "03",
-    image: "/bonus3.png",
+    image: "/bonus3.webp",
     originalPrice: "R$ 37,00",
     description:
       "Aprenda os truques que deixam suas peças mais bonitas, lisas e sem rachaduras. O segredo para criar peças com acabamento muito mais profissional.",
