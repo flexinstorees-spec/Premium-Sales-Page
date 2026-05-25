@@ -99,7 +99,6 @@ export function CTASection() {
                   src={bonus.image}
                   alt={bonus.label}
                   className="w-10 h-10 shrink-0 object-contain rounded-lg"
-                  style={{ boxShadow: "0 1px 6px rgba(173,103,75,0.18)" }}
                 />
                 <span className="font-sans font-medium text-foreground text-sm sm:text-base">{bonus.label}</span>
               </motion.div>
