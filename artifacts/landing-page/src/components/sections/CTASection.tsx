@@ -106,7 +106,7 @@ export function CTASection() {
                 boxShadow: "0 6px 24px rgba(90,158,104,0.35)",
               }}
             >
-              QUERO ACESSAR AGORA
+              QUERO COMPRAR AGORA
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
 
