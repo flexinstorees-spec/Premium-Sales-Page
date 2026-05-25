@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Check, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, Check, Sparkles, Gift } from "lucide-react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 
 const deliverables = [
@@ -13,9 +13,9 @@ const deliverables = [
 ];
 
 const bonuses = [
-  "🎁 Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria",
-  "🎁 Bônus 02 — Lista Secreta de Fornecedores",
-  "🎁 Bônus 03 — O Truque das Peças Perfeitas",
+  "Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria",
+  "Bônus 02 — Lista Secreta de Fornecedores",
+  "Bônus 03 — O Truque das Peças Perfeitas",
 ];
 
 export function CTASection() {
@@ -95,6 +95,12 @@ export function CTASection() {
                 transition={{ duration: 0.3, delay: i * 0.07 }}
                 className="flex items-center gap-3"
               >
+                <div
+                  className="w-5 h-5 shrink-0 rounded-full flex items-center justify-center"
+                  style={{ background: "linear-gradient(135deg, #ad674b, #c89566)" }}
+                >
+                  <Gift className="w-3 h-3 text-white" />
+                </div>
                 <span className="font-sans font-medium text-foreground text-sm sm:text-base">{item}</span>
               </motion.div>
             ))}
