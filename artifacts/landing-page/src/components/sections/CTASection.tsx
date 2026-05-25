@@ -12,6 +12,12 @@ const deliverables = [
   "Acesso imediato pelo celular",
 ];
 
+const bonuses = [
+  "🎁 Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria",
+  "🎁 Bônus 02 — Lista Secreta de Fornecedores",
+  "🎁 Bônus 03 — O Truque das Peças Perfeitas",
+];
+
 export function CTASection() {
   return (
     <SectionWrapper id="oferta">
@@ -71,6 +77,25 @@ export function CTASection() {
                   <Check className="w-3 h-3" strokeWidth={3} style={{ color: "#ad674b" }} />
                 </div>
                 <span className="font-sans font-light text-foreground text-sm sm:text-base">{item}</span>
+              </motion.div>
+            ))}
+
+            {/* Divider */}
+            <div className="border-t my-1" style={{ borderColor: "#ad674b22" }} />
+
+            <p className="font-sans font-semibold text-foreground text-sm tracking-wide uppercase" style={{ color: "#ad674b" }}>
+              + Bônus exclusivos:
+            </p>
+            {bonuses.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -8 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: i * 0.07 }}
+                className="flex items-center gap-3"
+              >
+                <span className="font-sans font-medium text-foreground text-sm sm:text-base">{item}</span>
               </motion.div>
             ))}
           </div>
