@@ -13,9 +13,9 @@ const deliverables = [
 ];
 
 const bonuses = [
-  { label: "Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria", image: "/bonus1.png" },
-  { label: "Bônus 02 — Lista Secreta de Fornecedores", image: "/bonus2.png" },
-  { label: "Bônus 03 — O Truque das Peças Perfeitas", image: "/bonus3.png" },
+  { label: "Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria", image: "/bonus1.png", price: "R$ 47,00" },
+  { label: "Bônus 02 — Lista Secreta de Fornecedores", image: "/bonus2.png", price: "R$ 37,00" },
+  { label: "Bônus 03 — O Truque das Peças Perfeitas", image: "/bonus3.png", price: "R$ 37,00" },
 ];
 
 export function CTASection() {
@@ -100,7 +100,10 @@ export function CTASection() {
                   alt={bonus.label}
                   className="w-10 h-10 shrink-0 object-contain rounded-lg"
                 />
-                <span className="font-sans font-medium text-foreground text-sm sm:text-base">{bonus.label}</span>
+                <div className="flex flex-col gap-0.5">
+                  <span className="font-sans font-medium text-foreground text-sm sm:text-base leading-snug">{bonus.label}</span>
+                  <span className="font-sans text-xs font-semibold line-through" style={{ color: "#ad674b99" }}>{bonus.price}</span>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -112,10 +115,13 @@ export function CTASection() {
           >
             {/* Price block */}
             <div className="flex flex-col items-center gap-1.5">
-              <div className="flex items-center gap-2">
-                <span className="font-sans text-base font-medium text-muted-foreground">De</span>
-                <span className="font-sans text-xl font-bold line-through" style={{ color: "#ad674b99" }}>R$ 97,00</span>
-                <span className="font-sans text-base font-medium text-muted-foreground">por apenas</span>
+              <div className="flex flex-col items-center gap-1">
+                <span className="font-sans text-xs font-medium text-muted-foreground uppercase tracking-wide">Valor total do pacote</span>
+                <div className="flex items-center gap-2">
+                  <span className="font-sans text-base font-medium text-muted-foreground">De</span>
+                  <span className="font-sans text-xl font-bold line-through" style={{ color: "#ad674b99" }}>R$ 218,00</span>
+                  <span className="font-sans text-base font-medium text-muted-foreground">por apenas</span>
+                </div>
               </div>
               <div className="flex items-baseline gap-1 mt-1">
                 <span className="font-sans font-bold text-2xl" style={{ color: "#4a8e58" }}>R$</span>
