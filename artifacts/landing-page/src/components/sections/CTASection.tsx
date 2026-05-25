@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Check, Sparkles, Gift } from "lucide-react";
+import { ArrowRight, ShieldCheck, Check, Sparkles } from "lucide-react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 
 const deliverables = [
@@ -13,9 +13,9 @@ const deliverables = [
 ];
 
 const bonuses = [
-  "Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria",
-  "Bônus 02 — Lista Secreta de Fornecedores",
-  "Bônus 03 — O Truque das Peças Perfeitas",
+  { label: "Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria", image: "/bonus1.png" },
+  { label: "Bônus 02 — Lista Secreta de Fornecedores", image: "/bonus2.png" },
+  { label: "Bônus 03 — O Truque das Peças Perfeitas", image: "/bonus3.png" },
 ];
 
 export function CTASection() {
@@ -86,7 +86,7 @@ export function CTASection() {
             <p className="font-sans font-semibold text-foreground text-sm tracking-wide uppercase" style={{ color: "#ad674b" }}>
               + Bônus exclusivos:
             </p>
-            {bonuses.map((item, i) => (
+            {bonuses.map((bonus, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -8 }}
@@ -95,13 +95,13 @@ export function CTASection() {
                 transition={{ duration: 0.3, delay: i * 0.07 }}
                 className="flex items-center gap-3"
               >
-                <div
-                  className="w-5 h-5 shrink-0 rounded-full flex items-center justify-center"
-                  style={{ background: "linear-gradient(135deg, #ad674b, #c89566)" }}
-                >
-                  <Gift className="w-3 h-3 text-white" />
-                </div>
-                <span className="font-sans font-medium text-foreground text-sm sm:text-base">{item}</span>
+                <img
+                  src={bonus.image}
+                  alt={bonus.label}
+                  className="w-10 h-10 shrink-0 object-contain rounded-lg"
+                  style={{ boxShadow: "0 1px 6px rgba(173,103,75,0.18)" }}
+                />
+                <span className="font-sans font-medium text-foreground text-sm sm:text-base">{bonus.label}</span>
               </motion.div>
             ))}
           </div>
