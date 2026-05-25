@@ -95,7 +95,10 @@ export function CTASection() {
               <span className="font-sans font-light text-muted-foreground text-sm">à vista • acesso imediato</span>
             </div>
 
-            <button
+            <a
+              href="https://pay.wiapy.com/6a1445de0cb7ee7a78ed0906"
+              target="_blank"
+              rel="noopener noreferrer"
               data-testid="button-main-cta"
               className="group flex items-center justify-center w-full min-h-[60px] px-8 py-4 text-white font-bold rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-base tracking-wide"
               style={{
@@ -105,7 +108,7 @@ export function CTASection() {
             >
               QUERO ACESSAR AGORA
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
 
             <div className="flex items-center gap-2 text-sm text-muted-foreground font-light">
               <ShieldCheck className="w-4 h-4 shrink-0" style={{ color: "#5a9e68" }} />
