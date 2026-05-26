@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Check, Sparkles, Star } from "lucide-react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 
+const deliverablesBasico = [
+  "+250 moldes prontos de cerâmica fria",
+  "Acesso vitalício",
+  "Acesso imediato",
+];
+
 const deliverables = [
   "+250 moldes prontos de cerâmica fria",
   "Passo a passo fácil de seguir",
@@ -75,7 +81,7 @@ export function CTASection() {
               <p className="font-sans font-semibold text-xs mb-1 tracking-wide uppercase" style={{ color: "#ad674b" }}>
                 O que você recebe:
               </p>
-              {deliverables.map((item, i) => (
+              {deliverablesBasico.map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div
                     className="w-5 h-5 shrink-0 rounded-full flex items-center justify-center"
