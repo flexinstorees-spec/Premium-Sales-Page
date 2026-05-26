@@ -132,8 +132,8 @@ export function CTASection() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="relative rounded-3xl overflow-hidden"
             style={{
-              border: "2px solid #4a8e58",
-              boxShadow: "0 8px 40px rgba(74,142,88,0.18), 0 2px 16px rgba(0,0,0,0.07)",
+              border: "2px solid #ad674b55",
+              boxShadow: "0 8px 40px rgba(173,103,75,0.18), 0 2px 16px rgba(0,0,0,0.07)",
             }}
           >
             {/* Header */}
