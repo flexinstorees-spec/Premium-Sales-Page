@@ -136,21 +136,17 @@ export function CTASection() {
               boxShadow: "0 8px 40px rgba(74,142,88,0.18), 0 2px 16px rgba(0,0,0,0.07)",
             }}
           >
-            {/* Mais Popular badge */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+            {/* Header */}
+            <div
+              className="px-6 py-5 text-center flex flex-col items-center gap-2"
+              style={{ background: "linear-gradient(135deg, #ad674b, #c89566)" }}
+            >
               <span
-                className="flex items-center gap-1 px-4 py-1 rounded-full font-sans font-bold text-xs tracking-widest uppercase text-white"
-                style={{ background: "linear-gradient(135deg, #5a9e68, #4a8e58)", boxShadow: "0 2px 8px rgba(74,142,88,0.35)" }}
+                className="flex items-center gap-1 px-3 py-1 rounded-full font-sans font-bold text-xs tracking-widest uppercase text-white"
+                style={{ background: "rgba(255,255,255,0.22)", border: "1px solid rgba(255,255,255,0.35)" }}
               >
                 <Star className="w-3 h-3 fill-white" /> Mais Popular
               </span>
-            </div>
-
-            {/* Header */}
-            <div
-              className="px-6 pt-8 pb-5 text-center"
-              style={{ background: "linear-gradient(135deg, #ad674b, #c89566)" }}
-            >
               <div className="flex items-center justify-center gap-2">
                 <Sparkles className="w-4 h-4 text-white/80" />
                 <p className="font-sans font-bold text-white text-sm tracking-widest uppercase">
