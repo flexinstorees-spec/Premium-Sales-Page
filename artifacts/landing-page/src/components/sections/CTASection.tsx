@@ -113,9 +113,9 @@ export function CTASection() {
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center w-full min-h-[52px] px-6 py-3 font-bold rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-sm tracking-wide"
                 style={{
-                  background: "linear-gradient(135deg, #c89566, #ad674b)",
+                  background: "linear-gradient(135deg, #5a9e68, #4a8e58)",
                   color: "#fff",
-                  boxShadow: "0 4px 18px rgba(173,103,75,0.30)",
+                  boxShadow: "0 4px 18px rgba(90,158,104,0.35)",
                 }}
               >
                 QUERO O BÁSICO
