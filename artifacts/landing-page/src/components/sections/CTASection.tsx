@@ -16,6 +16,7 @@ const deliverables = [
   "Referência visual para cada ideia",
   "Dicas de acabamento profissional",
   "Acesso imediato pelo celular",
+  "Acesso vitalício",
 ];
 
 const bonuses = [
@@ -25,7 +26,7 @@ const bonuses = [
 ];
 
 const CHECKOUT_BASICO = "https://pay.wiapy.com/6a1445de0cb7ee7a78ed0906";
-const CHECKOUT_PREMIUM = "https://pay.wiapy.com/6a1445de0cb7ee7a78ed0906";
+const CHECKOUT_PREMIUM = "https://pay.wiapy.com/BdUKV4zHR";
 
 export function CTASection() {
   return (
