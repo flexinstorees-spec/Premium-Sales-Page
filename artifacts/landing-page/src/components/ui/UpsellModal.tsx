@@ -10,6 +10,14 @@ const upsellItems = [
   "Passo a passo fácil de seguir",
   "Lista de materiais de cada peça",
   "Dicas de acabamento profissional",
+  "Acesso imediato pelo celular",
+  "Acesso vitalício",
+];
+
+const upsellBonuses = [
+  { label: "Bônus 01 — Protocolo Primeira Peça de Cerâmica Fria", image: "/bonus1.webp" },
+  { label: "Bônus 02 — Lista Secreta de Fornecedores", image: "/bonus2.webp" },
+  { label: "Bônus 03 — O Truque das Peças Perfeitas", image: "/bonus3.webp" },
 ];
 
 interface UpsellModalProps {
@@ -116,6 +124,18 @@ export function UpsellModal({ open, onClose }: UpsellModalProps) {
                   <span className="font-sans font-light text-foreground text-sm">{item}</span>
                 </div>
               ))}
+
+              <div className="border-t my-1" style={{ borderColor: "#ad674b22" }} />
+
+              <p className="font-sans font-semibold text-xs tracking-wide uppercase" style={{ color: "#ad674b" }}>
+                + Bônus exclusivos:
+              </p>
+              {upsellBonuses.map((bonus, i) => (
+                <div key={i} className="flex items-center gap-2.5">
+                  <img src={bonus.image} alt={bonus.label} className="w-8 h-8 shrink-0 object-contain rounded-lg" />
+                  <span className="font-sans font-light text-foreground text-xs leading-snug">{bonus.label}</span>
+                </div>
+              ))}
             </div>
 
             {/* CTAs */}
@@ -134,7 +154,7 @@ export function UpsellModal({ open, onClose }: UpsellModalProps) {
                   boxShadow: "0 6px 24px rgba(90,158,104,0.35)",
                 }}
               >
-                SIM! QUERO O COMPLETO POR R$ 14,99
+                QUERO APROVEITAR OFERTA
               </a>
 
               <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-light">
