@@ -205,7 +205,7 @@ export function CTASection() {
                   transition={{ duration: 0.3, delay: i * 0.07 }}
                   className="flex items-center gap-3"
                 >
-                  <img src={bonus.image} alt={bonus.label} className="w-10 h-10 shrink-0 object-contain rounded-lg" />
+                  <img src={bonus.image} alt={bonus.label} className="w-10 h-10 shrink-0 object-contain rounded-lg" loading="lazy" decoding="async" width={40} height={40} />
                   <div className="flex flex-col gap-0.5">
                     <span className="font-sans font-medium text-foreground text-sm leading-snug">{bonus.label}</span>
                     <span className="font-sans text-xs font-semibold line-through" style={{ color: "#ad674b99" }}>{bonus.price}</span>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-const productImage = `${import.meta.env.BASE_URL}product.png`;
+const productImage = `${import.meta.env.BASE_URL}product-hero.webp`;
 
 const tickerItems = [
   "+250 moldes prontos para copiar",

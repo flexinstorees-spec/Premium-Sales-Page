@@ -66,6 +66,10 @@ export function BonusSection() {
                 src={bonus.image}
                 alt={`Bônus ${bonus.number}`}
                 className="w-40 h-40 object-contain"
+                loading="lazy"
+                decoding="async"
+                width={160}
+                height={160}
               />
               <span
                 className="font-sans font-bold text-xs tracking-widest uppercase px-3 py-1 rounded-full"
