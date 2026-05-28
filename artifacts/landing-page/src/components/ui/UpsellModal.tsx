@@ -36,25 +36,21 @@ export function UpsellModal({ open, onClose }: UpsellModalProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-5"
           style={{ background: "rgba(0,0,0,0.65)", backdropFilter: "blur(4px)" }}
           onClick={onClose}
         >
           <motion.div
             key="modal"
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "100%" }}
-            transition={{ duration: 0.32, ease: [0.32, 0.72, 0, 1] }}
-            className="relative w-full sm:max-w-md shadow-2xl rounded-t-3xl sm:rounded-3xl overflow-hidden"
+            initial={{ opacity: 0, scale: 0.93, y: 16 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.93, y: 16 }}
+            transition={{ duration: 0.28, ease: "easeOut" }}
+            className="relative w-full max-w-sm shadow-2xl rounded-3xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Drag handle — mobile only */}
-            <div className="sm:hidden flex justify-center pt-2.5 pb-1" style={{ background: "#ad674b" }}>
-              <div className="w-8 h-1 rounded-full bg-white/40" />
-            </div>
 
-            {/* Close */}
+            {/* Close — always visible */}
             <button
               onClick={onClose}
               className="absolute top-3 right-3 z-10 w-7 h-7 flex items-center justify-center rounded-full"
