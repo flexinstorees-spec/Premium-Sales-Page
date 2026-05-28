@@ -113,7 +113,7 @@ export function CTASection() {
                 </div>
                 <div className="flex items-baseline gap-1">
                   <span className="font-sans font-bold text-xl" style={{ color: "#4a8e58" }}>R$</span>
-                  <span className="font-sans font-extrabold leading-none text-6xl" style={{ color: "#4a8e58" }}>10</span>
+                  <span className="font-sans font-extrabold leading-none text-5xl sm:text-6xl" style={{ color: "#4a8e58" }}>10</span>
                   <span className="font-sans font-bold text-xl" style={{ color: "#4a8e58" }}>,00</span>
                 </div>
                 <span className="font-sans font-light text-muted-foreground text-xs">à vista • acesso imediato</span>

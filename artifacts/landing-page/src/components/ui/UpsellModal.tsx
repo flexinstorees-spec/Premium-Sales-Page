@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, ShieldCheck, Check, Sparkles, Star } from "lucide-react";
 
@@ -19,31 +20,47 @@ interface UpsellModalProps {
 }
 
 export function UpsellModal({ open, onClose }: UpsellModalProps) {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
   return (
     <AnimatePresence>
       {open && (
-        <>
-          {/* Backdrop */}
+        <motion.div
+          key="backdrop"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4"
+          style={{ background: "rgba(0,0,0,0.65)", backdropFilter: "blur(4px)" }}
+          onClick={onClose}
+        >
+          {/* Modal — slides up from bottom on mobile, scales in on desktop */}
           <motion.div
-            key="backdrop"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
-            style={{ background: "rgba(0,0,0,0.65)", backdropFilter: "blur(4px)" }}
-            onClick={onClose}
+            key="modal"
+            initial={{ opacity: 0, y: "100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "100%" }}
+            transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
+            className="relative w-full sm:max-w-md overflow-hidden shadow-2xl rounded-t-3xl sm:rounded-3xl"
+            style={{ maxHeight: "90dvh" }}
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Modal */}
-            <motion.div
-              key="modal"
-              initial={{ opacity: 0, scale: 0.92, y: 24 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.92, y: 24 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
+            {/* Drag handle (mobile only) */}
+            <div className="sm:hidden flex justify-center pt-3 pb-1" style={{ background: "#ad674b" }}>
+              <div className="w-10 h-1 rounded-full bg-white/40" />
+            </div>
+
+            {/* Scrollable content */}
+            <div className="overflow-y-auto" style={{ maxHeight: "88dvh" }}>
+
               {/* Close button */}
               <button
                 onClick={onClose}
@@ -55,7 +72,7 @@ export function UpsellModal({ open, onClose }: UpsellModalProps) {
 
               {/* Header */}
               <div
-                className="px-6 pt-7 pb-5 text-center flex flex-col items-center gap-2"
+                className="px-5 pt-5 pb-4 sm:pt-7 sm:pb-5 text-center flex flex-col items-center gap-2"
                 style={{ background: "linear-gradient(135deg, #ad674b, #c89566)" }}
               >
                 <span
@@ -66,19 +83,19 @@ export function UpsellModal({ open, onClose }: UpsellModalProps) {
                 </span>
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-white/80" />
-                  <h2 className="font-sans font-bold text-white text-lg leading-snug">
+                  <h2 className="font-sans font-bold text-white text-base sm:text-lg leading-snug">
                     Espera! Antes de sair...
                   </h2>
                   <Sparkles className="w-4 h-4 text-white/80" />
                 </div>
                 <p className="font-sans text-white/90 text-sm font-light max-w-xs leading-relaxed">
-                  Que tal levar o <strong>material completo</strong> com passo a passo, lista de materiais e dicas profissionais por apenas:
+                  Leve o <strong>material completo</strong> com passo a passo, lista de materiais e dicas profissionais por apenas:
                 </p>
               </div>
 
-              {/* Price highlight */}
+              {/* Price */}
               <div
-                className="px-6 py-5 flex flex-col items-center gap-1 text-center"
+                className="px-5 py-4 flex flex-col items-center gap-1 text-center"
                 style={{ background: "#fdf8f5", borderBottom: "1px solid #ad674b22" }}
               >
                 <div className="flex items-center gap-2">
@@ -87,15 +104,18 @@ export function UpsellModal({ open, onClose }: UpsellModalProps) {
                   <span className="font-sans text-sm text-muted-foreground">por apenas</span>
                 </div>
                 <div className="flex items-baseline gap-1">
-                  <span className="font-sans font-bold text-2xl" style={{ color: "#4a8e58" }}>R$</span>
-                  <span className="font-sans font-extrabold leading-none text-7xl" style={{ color: "#4a8e58" }}>14</span>
-                  <span className="font-sans font-bold text-2xl" style={{ color: "#4a8e58" }}>,99</span>
+                  <span className="font-sans font-bold text-xl sm:text-2xl" style={{ color: "#4a8e58" }}>R$</span>
+                  <span
+                    className="font-sans font-extrabold leading-none"
+                    style={{ color: "#4a8e58", fontSize: "clamp(3.5rem, 18vw, 5rem)" }}
+                  >14</span>
+                  <span className="font-sans font-bold text-xl sm:text-2xl" style={{ color: "#4a8e58" }}>,99</span>
                 </div>
                 <span className="font-sans text-xs text-muted-foreground font-light">à vista • acesso imediato</span>
               </div>
 
               {/* Items */}
-              <div className="px-6 py-4 flex flex-col gap-2.5" style={{ background: "#fff" }}>
+              <div className="px-5 py-4 flex flex-col gap-2.5" style={{ background: "#fff" }}>
                 <p className="font-sans font-semibold text-xs tracking-wide uppercase mb-1" style={{ color: "#ad674b" }}>
                   O que você recebe:
                 </p>
@@ -114,14 +134,14 @@ export function UpsellModal({ open, onClose }: UpsellModalProps) {
 
               {/* CTAs */}
               <div
-                className="px-6 py-5 flex flex-col items-center gap-3"
+                className="px-5 py-5 flex flex-col items-center gap-3"
                 style={{ background: "linear-gradient(180deg, #fff 0%, #fdf6f2 100%)", borderTop: "1px solid #ad674b18" }}
               >
                 <a
                   href={CHECKOUT_UPSELL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-center w-full min-h-[56px] px-8 py-3 text-white font-bold rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-sm tracking-wide"
+                  className="group flex items-center justify-center w-full min-h-[52px] sm:min-h-[56px] px-6 py-3 text-white font-bold rounded-full transition-all duration-300 active:scale-[0.98] text-sm tracking-wide"
                   style={{
                     background: "linear-gradient(135deg, #5a9e68, #4a8e58)",
                     boxShadow: "0 6px 24px rgba(90,158,104,0.35)",
@@ -140,14 +160,15 @@ export function UpsellModal({ open, onClose }: UpsellModalProps) {
                   href={CHECKOUT_BASICO}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-sans text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground transition-colors"
+                  className="font-sans text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground transition-colors pb-1"
                 >
                   Não, prefiro continuar só com o básico
                 </a>
               </div>
-            </motion.div>
+
+            </div>
           </motion.div>
-        </>
+        </motion.div>
       )}
     </AnimatePresence>
   );

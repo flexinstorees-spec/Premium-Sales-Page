@@ -15,11 +15,11 @@ export function WhatYouGetSection() {
 
   return (
     <SectionWrapper className="bg-primary/[0.03] border-y border-border/50">
-      <div className="max-w-4xl mx-auto bg-card rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm border border-border">
-        <h2 className="font-serif text-3xl md:text-4xl text-center text-foreground mb-4">
+      <div className="max-w-4xl mx-auto bg-card rounded-[2rem] sm:rounded-[2.5rem] p-5 sm:p-8 md:p-12 lg:p-16 shadow-sm border border-border">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-center text-foreground mb-4">
           O que você vai encontrar dentro do material
         </h2>
-        <p className="text-center text-muted-foreground font-light mb-12 text-lg">
+        <p className="text-center text-muted-foreground font-light mb-8 sm:mb-12 text-base sm:text-lg">
           Cada ideia acompanha tudo o que você precisa para criar, do zero ao acabamento.
         </p>
 
