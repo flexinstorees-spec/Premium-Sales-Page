@@ -81,19 +81,28 @@ export function UpsellModal({ open, onClose }: UpsellModalProps) {
 
             {/* Price */}
             <div
-              className="px-4 py-2 flex items-center justify-center gap-3"
-              style={{ background: "#fdf8f5", borderBottom: "1px solid #ad674b22" }}
+              className="px-4 py-3 flex flex-col items-center gap-1"
+              style={{ background: "linear-gradient(180deg, #f0faf3 0%, #e8f5ec 100%)", borderBottom: "2px solid #4a8e5833" }}
             >
               <div className="flex items-center gap-1.5">
-                <span className="font-sans text-xs text-muted-foreground line-through" style={{ color: "#ad674b99" }}>R$ 97,00</span>
-                <span className="font-sans text-xs text-muted-foreground">→</span>
+                <span className="font-sans text-xs text-muted-foreground">De</span>
+                <span className="font-sans text-xs font-semibold line-through" style={{ color: "#ad674b99" }}>R$ 97,00</span>
+                <span className="font-sans text-xs text-muted-foreground">por apenas</span>
               </div>
-              <div className="flex items-baseline gap-0.5">
-                <span className="font-sans font-bold text-sm" style={{ color: "#4a8e58" }}>R$</span>
-                <span className="font-sans font-extrabold leading-none text-4xl" style={{ color: "#4a8e58" }}>14</span>
-                <span className="font-sans font-bold text-sm" style={{ color: "#4a8e58" }}>,99</span>
+              <div className="flex items-baseline gap-1">
+                <span className="font-sans font-bold text-xl" style={{ color: "#4a8e58" }}>R$</span>
+                <span
+                  className="font-sans font-extrabold leading-none"
+                  style={{ color: "#4a8e58", fontSize: "clamp(3rem, 16vw, 4.5rem)", textShadow: "0 2px 12px rgba(74,142,88,0.18)" }}
+                >14</span>
+                <span className="font-sans font-bold text-xl" style={{ color: "#4a8e58" }}>,99</span>
               </div>
-              <span className="font-sans text-[10px] text-muted-foreground font-light">à vista</span>
+              <span
+                className="font-sans font-semibold text-xs px-3 py-0.5 rounded-full"
+                style={{ background: "#4a8e5822", color: "#4a8e58" }}
+              >
+                à vista • acesso imediato
+              </span>
             </div>
 
             {/* Items — 2 column grid */}
