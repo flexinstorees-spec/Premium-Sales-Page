@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ShieldCheck, Check, Star } from "lucide-react";
 
-const CHECKOUT_UPSELL = "https://pay.wiapy.com/BdUKV4zHR";
-const CHECKOUT_BASICO = "https://pay.wiapy.com/6a1445de0cb7ee7a78ed0906";
+const CHECKOUT_UPSELL = "https://pay.wiapy.com/KwAW8an6N";
+const CHECKOUT_BASICO = "https://pay.wiapy.com/mn8PydQryz";
 
 const upsellItems = [
   "+250 moldes prontos",
