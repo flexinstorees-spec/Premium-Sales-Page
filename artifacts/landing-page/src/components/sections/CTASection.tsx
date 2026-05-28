@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Check, Sparkles, Star } from "lucide-react";
 import { SectionWrapper } from "../ui/SectionWrapper";
+import { UpsellModal } from "../ui/UpsellModal";
 
 const deliverablesBasico = [
   "+250 moldes prontos de cerâmica fria",
@@ -29,8 +31,11 @@ const CHECKOUT_BASICO = "https://pay.wiapy.com/6a1445de0cb7ee7a78ed0906";
 const CHECKOUT_PREMIUM = "https://pay.wiapy.com/BdUKV4zHR";
 
 export function CTASection() {
+  const [upsellOpen, setUpsellOpen] = useState(false);
+
   return (
     <SectionWrapper id="oferta">
+      <UpsellModal open={upsellOpen} onClose={() => setUpsellOpen(false)} />
       <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
 
         {/* Heading */}
@@ -114,10 +119,8 @@ export function CTASection() {
                 <span className="font-sans font-light text-muted-foreground text-xs">à vista • acesso imediato</span>
               </div>
 
-              <a
-                href={CHECKOUT_BASICO}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => setUpsellOpen(true)}
                 className="group flex items-center justify-center w-full min-h-[52px] px-6 py-3 font-bold rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-sm tracking-wide"
                 style={{
                   background: "linear-gradient(135deg, #5a9e68, #4a8e58)",
@@ -127,7 +130,7 @@ export function CTASection() {
               >
                 QUERO O BÁSICO
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </button>
             </div>
           </motion.div>
 
