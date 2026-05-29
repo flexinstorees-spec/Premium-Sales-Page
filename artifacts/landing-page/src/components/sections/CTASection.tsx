@@ -27,8 +27,8 @@ const bonuses = [
   { label: "Bônus 03 — O Truque das Peças Perfeitas", image: "/bonus3.webp", price: "R$ 37,00" },
 ];
 
-const CHECKOUT_BASICO = "https://pay.wiapy.com/mn8PydQryz";
-const CHECKOUT_PREMIUM = "https://pay.wiapy.com/BdUKV4zHR";
+const CHECKOUT_BASICO = "https://lastlink.com/p/C1ED92E53/checkout-payment/";
+const CHECKOUT_PREMIUM = "https://lastlink.com/p/C7D55762B/checkout-payment/";
 
 export function CTASection() {
   const [upsellOpen, setUpsellOpen] = useState(false);
