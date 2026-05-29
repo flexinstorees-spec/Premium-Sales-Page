@@ -28,7 +28,7 @@ const bonuses = [
 ];
 
 const CHECKOUT_BASICO = "https://pay.wiapy.com/mn8PydQryz";
-const CHECKOUT_PREMIUM = "https://pay.wiapy.com/mn8PydQryz";
+const CHECKOUT_PREMIUM = "https://lastlink.com/p/C7D55762B/checkout-payment/";
 
 export function CTASection() {
   const [upsellOpen, setUpsellOpen] = useState(false);
