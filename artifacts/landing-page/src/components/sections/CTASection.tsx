@@ -228,7 +228,7 @@ export function CTASection() {
                 </div>
                 <div className="flex items-baseline gap-1 mt-1">
                   <span className="font-sans font-bold text-xl" style={{ color: "#4a8e58" }}>R$</span>
-                  <span className="font-sans font-extrabold leading-none" style={{ color: "#4a8e58", fontSize: "clamp(4rem,18vw,6rem)" }}>19</span>
+                  <span className="font-sans font-extrabold leading-none" style={{ color: "#4a8e58", fontSize: "clamp(4rem,18vw,6rem)" }}>27</span>
                   <span className="font-sans font-bold text-xl" style={{ color: "#4a8e58" }}>,90</span>
                 </div>
                 <span className="font-sans font-light text-muted-foreground text-xs">à vista • acesso imediato</span>
