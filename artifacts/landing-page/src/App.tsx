@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
+import { BackRedirectModal } from "@/components/ui/BackRedirectModal";
 import { TopBar } from "@/components/sections/TopBar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { DiscoverSection } from "@/components/sections/DiscoverSection";
@@ -22,6 +23,7 @@ const queryClient = new QueryClient();
 function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
+      <BackRedirectModal />
       <TopBar />
       <div className="pt-9">
         <HeroSection />
