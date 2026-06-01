@@ -17,6 +17,12 @@ export function BackRedirectModal() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    // Open immediately if ?exit=1 is in the URL
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("exit") === "1") {
+      setOpen(true);
+    }
+
     window.history.pushState({ backRedirect: true }, "");
 
     const handlePopState = () => {
