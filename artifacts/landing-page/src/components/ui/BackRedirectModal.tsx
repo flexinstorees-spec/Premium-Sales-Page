@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ShieldCheck, Check, Zap, Star } from "lucide-react";
 
-const CHECKOUT_BACK = "https://pay.wiapy.com/mn8PydQryz";
+const CHECKOUT_BACK = "https://lastlink.com/p/CAE6594F5/checkout-payment/";
 
 const items = [
   "+250 moldes prontos",
