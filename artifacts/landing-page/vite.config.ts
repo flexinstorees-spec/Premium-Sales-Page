@@ -26,14 +26,15 @@ if (!basePath) {
   );
 }
 
+const isProd = process.env.NODE_ENV === "production";
+
 export default defineConfig({
   base: basePath,
   plugins: [
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
+    ...(!isProd && process.env.REPL_ID !== undefined
       ? [
           await import("@replit/vite-plugin-cartographer").then((m) =>
             m.cartographer({
@@ -57,16 +58,27 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    target: "esnext",
+    cssMinify: true,
+    reportCompressedSize: false,
     rollupOptions: {
       output: {
         manualChunks: {
-          react: ["react", "react-dom"],
-          motion: ["framer-motion"],
-          ui: ["@radix-ui/react-accordion", "lucide-react"],
+          "react-core": ["react", "react-dom"],
+          "motion": ["framer-motion"],
+          "ui-primitives": ["@radix-ui/react-accordion", "lucide-react"],
         },
       },
     },
     chunkSizeWarningLimit: 600,
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        passes: 2,
+      },
+    },
   },
   server: {
     port,
