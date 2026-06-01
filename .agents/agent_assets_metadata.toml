@@ -12,3 +12,9 @@ id = "9Cz0jfAc5aK4CBBbB7ZIz"
 uri = "file://landing-page-netlify.zip"
 type = "unspecified"
 title = "Landing Page — Netlify"
+
+[[outputs]]
+id = "JP084crxqyhH8WvgNe1oI"
+uri = "file://netlify-deploy.zip"
+type = "unspecified"
+title = "Landing Page — Netlify Deploy"
