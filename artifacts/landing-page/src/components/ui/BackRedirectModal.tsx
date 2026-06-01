@@ -93,7 +93,7 @@ export function BackRedirectModal() {
                 <span
                   className="font-extrabold"
                   style={{ color: "#4a8e58", fontSize: "3.8rem", lineHeight: 1 }}
-                >4</span>
+                >5</span>
                 <span className="font-bold text-2xl" style={{ color: "#4a8e58" }}>,90</span>
               </div>
               <span
@@ -150,7 +150,7 @@ export function BackRedirectModal() {
                   boxShadow: "0 4px 16px rgba(90,158,104,0.38)",
                 }}
               >
-                QUERO POR R$4,90 AGORA
+                QUERO POR R$5,90 AGORA
               </a>
 
               <div className="flex items-center gap-1 text-[10px] text-muted-foreground font-light">
