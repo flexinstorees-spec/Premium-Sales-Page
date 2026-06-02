@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../ui/SectionWrapper";
 import { Award, Users, Star, BookOpen } from "lucide-react";
 
-const alicePhoto = `${import.meta.env.BASE_URL}alice-correia.png`;
+const alicePhoto = `${import.meta.env.BASE_URL}alice-correia.webp`;
 
 const credentials = [
   { icon: Award, label: "+5 anos ensinando cerâmica fria" },
