@@ -1,5 +1,5 @@
 import * as Accordion from "@radix-ui/react-accordion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 import { forwardRef, ReactNode } from "react";
 import { cn } from "@/lib/utils";
@@ -95,6 +95,20 @@ export function FAQSection() {
             </AccordionItem>
           ))}
         </Accordion.Root>
+
+        <div className="mt-10 flex flex-col items-center gap-3">
+          <button
+            type="button"
+            onClick={() => document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" })}
+            className="group flex items-center justify-center w-full sm:w-auto min-h-[56px] px-10 py-4 bg-primary text-primary-foreground font-semibold rounded-full transition-all duration-300 hover:scale-[1.02] hover:bg-primary/90 active:scale-[0.98] shadow-lg shadow-primary/20 text-base"
+          >
+            QUERO ACESSAR AGORA
+            <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </button>
+          <span className="font-sans font-light text-xs text-muted-foreground">
+            Acesso imediato • Garantia de 7 dias
+          </span>
+        </div>
       </div>
     </SectionWrapper>
   );
