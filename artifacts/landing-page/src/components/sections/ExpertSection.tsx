@@ -78,9 +78,7 @@ export function ExpertSection() {
               Apaixonada por artesanato desde criança, Alice transformou sua paixão por cerâmica fria em uma missão:
               <strong className="font-semibold text-foreground"> ensinar mulheres a criar peças lindas, do zero, sem complicação.</strong>
             </p>
-            <p className="font-sans font-light text-base text-muted-foreground leading-relaxed">
-              Ao longo de mais de 5 anos, ela desenvolveu um método simples e visual que já ajudou milhares de alunas a dar os primeiros passos — e a faturar com o próprio artesanato.
-            </p>
+            <p className="font-sans font-light text-base text-muted-foreground leading-relaxed">Ao longo de mais de 5 anos, ela desenvolveu um método simples e visual que já ajudou milhares de alunas a dar os primeiros passos.</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1">
               {credentials.map((item, i) => (
