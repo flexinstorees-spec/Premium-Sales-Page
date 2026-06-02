@@ -16,6 +16,7 @@ const BonusSection      = lazy(() => import("@/components/sections/BonusSection"
 const CountdownTimer    = lazy(() => import("@/components/sections/CountdownTimer").then(m => ({ default: m.CountdownTimer })));
 const CTASection        = lazy(() => import("@/components/sections/CTASection").then(m => ({ default: m.CTASection })));
 const TestimonialsSection = lazy(() => import("@/components/sections/TestimonialsSection").then(m => ({ default: m.TestimonialsSection })));
+const ExpertSection     = lazy(() => import("@/components/sections/ExpertSection").then(m => ({ default: m.ExpertSection })));
 const GuaranteeSection  = lazy(() => import("@/components/sections/GuaranteeSection").then(m => ({ default: m.GuaranteeSection })));
 const FAQSection        = lazy(() => import("@/components/sections/FAQSection").then(m => ({ default: m.FAQSection })));
 const Footer            = lazy(() => import("@/components/sections/Footer").then(m => ({ default: m.Footer })));
@@ -37,6 +38,7 @@ function Home() {
           <CountdownTimer />
           <CTASection />
           <TestimonialsSection />
+          <ExpertSection />
           <GuaranteeSection />
           <FAQSection />
           <Footer />
