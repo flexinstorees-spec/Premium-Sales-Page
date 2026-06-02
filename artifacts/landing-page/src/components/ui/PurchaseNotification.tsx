@@ -64,14 +64,14 @@ export function PurchaseNotification() {
   }, []);
 
   return (
-    <div className="fixed bottom-5 left-4 z-50 max-w-[280px]">
+    <div className="fixed top-14 right-4 z-50 max-w-[280px]">
       <AnimatePresence>
         {visible && current && (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -40, y: 10 }}
+            initial={{ opacity: 0, x: 40, y: -10 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
-            exit={{ opacity: 0, x: -30, y: 10 }}
+            exit={{ opacity: 0, x: 30, y: -10 }}
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="flex items-center gap-3 px-4 py-3 rounded-2xl shadow-xl"
             style={{
