@@ -23,6 +23,7 @@ export function BackRedirectModal() {
       setOpen(true);
     }
 
+    // Back button (mobile + desktop)
     window.history.pushState({ backRedirect: true }, "");
 
     const handlePopState = () => {
@@ -31,7 +32,23 @@ export function BackRedirectModal() {
     };
 
     window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
+
+    // Exit intent: mouse leaving viewport through the top (desktop only)
+    let shown = false;
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (shown) return;
+      if (e.clientY <= 0) {
+        shown = true;
+        setOpen(true);
+      }
+    };
+
+    document.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+    };
   }, []);
 
   const handleClose = () => setOpen(false);
