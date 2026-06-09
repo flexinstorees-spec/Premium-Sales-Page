@@ -18,3 +18,9 @@ id = "JP084crxqyhH8WvgNe1oI"
 uri = "file://netlify-deploy.zip"
 type = "unspecified"
 title = "Landing Page Otimizada — Netlify Deploy"
+
+[[outputs]]
+id = "6rFbB1bweWt_NUQV3yLzA"
+uri = "file://moldes-ceramica-netlify.zip"
+type = "unspecified"
+title = "moldes-ceramica-netlify.zip — Deploy Netlify"
