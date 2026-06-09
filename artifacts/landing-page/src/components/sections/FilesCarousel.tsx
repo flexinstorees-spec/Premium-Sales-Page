@@ -1,7 +1,7 @@
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../ui/SectionWrapper";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 
 import img1 from "@assets/1_1780966100010.png";
 import img2 from "@assets/2_1780966100010.png";
@@ -33,7 +33,7 @@ import img27 from "@assets/27_1780966218639.png";
 import img28 from "@assets/28_1780966218640.png";
 import img29 from "@assets/29_1780966218640.png";
 
-const images = [
+const BASE_IMAGES = [
   { src: img1, label: "Molde 1" },
   { src: img2, label: "Molde 2" },
   { src: img3, label: "Molde 3" },
@@ -67,55 +67,29 @@ const images = [
 
 const CARD_WIDTH = 200;
 const CARD_GAP = 14;
-const STEP = CARD_WIDTH + CARD_GAP;
+const DURATION = BASE_IMAGES.length * 2.2;
+
+const images = [...BASE_IMAGES, ...BASE_IMAGES];
 
 export function FilesCarousel() {
+  const [paused, setPaused] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
-  const [offset, setOffset] = useState(0);
-  const [maxOffset, setMaxOffset] = useState(0);
-  const autoRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  useEffect(() => {
-    const update = () => {
-      if (!trackRef.current) return;
-      const visible = trackRef.current.parentElement?.clientWidth ?? 0;
-      const total = images.length * STEP - CARD_GAP;
-      setMaxOffset(Math.max(0, total - visible));
-    };
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
-
-  const stopAuto = () => {
-    if (autoRef.current) clearInterval(autoRef.current);
-  };
-
-  const scrollBy = useCallback(
-    (dir: 1 | -1) => {
-      stopAuto();
-      setOffset((prev) => {
-        const next = prev + dir * STEP * 3;
-        return Math.max(0, Math.min(next, maxOffset));
-      });
-    },
-    [maxOffset]
-  );
-
-  useEffect(() => {
-    autoRef.current = setInterval(() => {
-      setOffset((prev) => {
-        const next = prev + STEP;
-        return next > maxOffset ? 0 : next;
-      });
-    }, 3000);
-    return () => {
-      if (autoRef.current) clearInterval(autoRef.current);
-    };
-  }, [maxOffset]);
 
   return (
     <SectionWrapper containerClassName="max-w-5xl">
+      <style>{`
+        @keyframes carousel-scroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .carousel-track {
+          animation: carousel-scroll ${DURATION}s linear infinite;
+        }
+        .carousel-track.paused {
+          animation-play-state: paused;
+        }
+      `}</style>
+
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -138,26 +112,18 @@ export function FilesCarousel() {
         </p>
       </motion.div>
 
-      <div className="relative px-5">
-        <button
-          onClick={() => scrollBy(-1)}
-          disabled={offset === 0}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-all disabled:opacity-30"
-          style={{ background: "#fff", border: "1px solid #ad674b33", color: "#ad674b" }}
-          aria-label="Anterior"
+      <div className="relative">
+        <div
+          className="overflow-hidden"
+          style={{
+            maskImage: "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
+          }}
         >
-          <ChevronLeft size={18} />
-        </button>
-
-        <div className="overflow-hidden rounded-xl">
           <div
             ref={trackRef}
-            className="flex"
-            style={{
-              gap: CARD_GAP,
-              transform: `translateX(-${offset}px)`,
-              transition: "transform 0.5s cubic-bezier(0.4,0,0.2,1)",
-            }}
+            className={`carousel-track flex${paused ? " paused" : ""}`}
+            style={{ gap: CARD_GAP, width: "max-content" }}
           >
             {images.map((img, i) => (
               <div
@@ -183,18 +149,24 @@ export function FilesCarousel() {
           </div>
         </div>
 
-        <button
-          onClick={() => scrollBy(1)}
-          disabled={offset >= maxOffset}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-all disabled:opacity-30"
-          style={{ background: "#fff", border: "1px solid #ad674b33", color: "#ad674b" }}
-          aria-label="Próximo"
-        >
-          <ChevronRight size={18} />
-        </button>
+        <div className="flex justify-center mt-5">
+          <button
+            onClick={() => setPaused((p) => !p)}
+            className="flex items-center gap-1.5 text-xs font-sans font-medium px-4 py-1.5 rounded-full transition-all"
+            style={{
+              background: "#ad674b12",
+              color: "#ad674b",
+              border: "1px solid #ad674b2a",
+            }}
+            aria-label={paused ? "Retomar" : "Pausar"}
+          >
+            {paused ? <Play size={13} /> : <Pause size={13} />}
+            {paused ? "Retomar" : "Pausar"}
+          </button>
+        </div>
       </div>
 
-      <p className="text-center font-sans text-xs text-muted-foreground mt-6">
+      <p className="text-center font-sans text-xs text-muted-foreground mt-4">
         E muito mais…{" "}
         <span className="font-semibold" style={{ color: "#ad674b" }}>
           +250 moldes no total
