@@ -13,6 +13,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 const DiscoverSection   = lazy(() => import("@/components/sections/DiscoverSection").then(m => ({ default: m.DiscoverSection })));
 const ImageCarousel     = lazy(() => import("@/components/sections/ImageCarousel").then(m => ({ default: m.ImageCarousel })));
 const StepByStepSection = lazy(() => import("@/components/sections/StepByStepSection").then(m => ({ default: m.StepByStepSection })));
+const FilesCarousel     = lazy(() => import("@/components/sections/FilesCarousel").then(m => ({ default: m.FilesCarousel })));
 const BonusSection      = lazy(() => import("@/components/sections/BonusSection").then(m => ({ default: m.BonusSection })));
 const CountdownTimer    = lazy(() => import("@/components/sections/CountdownTimer").then(m => ({ default: m.CountdownTimer })));
 const CTASection        = lazy(() => import("@/components/sections/CTASection").then(m => ({ default: m.CTASection })));
@@ -36,6 +37,7 @@ function Home() {
           <DiscoverSection />
           <ImageCarousel />
           <StepByStepSection />
+          <FilesCarousel />
           <BonusSection />
           <CountdownTimer />
           <CTASection />
