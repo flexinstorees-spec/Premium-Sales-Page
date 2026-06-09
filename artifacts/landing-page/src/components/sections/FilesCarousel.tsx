@@ -1,7 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../ui/SectionWrapper";
-import { Pause, Play } from "lucide-react";
 
 import img1 from "@assets/1_1780966100010.png";
 import img2 from "@assets/2_1780966100010.png";
@@ -72,7 +71,6 @@ const DURATION = BASE_IMAGES.length * 2.2;
 const images = [...BASE_IMAGES, ...BASE_IMAGES];
 
 export function FilesCarousel() {
-  const [paused, setPaused] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -122,7 +120,7 @@ export function FilesCarousel() {
         >
           <div
             ref={trackRef}
-            className={`carousel-track flex${paused ? " paused" : ""}`}
+            className="carousel-track flex"
             style={{ gap: CARD_GAP, width: "max-content" }}
           >
             {images.map((img, i) => (
@@ -149,21 +147,6 @@ export function FilesCarousel() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-5">
-          <button
-            onClick={() => setPaused((p) => !p)}
-            className="flex items-center gap-1.5 text-xs font-sans font-medium px-4 py-1.5 rounded-full transition-all"
-            style={{
-              background: "#ad674b12",
-              color: "#ad674b",
-              border: "1px solid #ad674b2a",
-            }}
-            aria-label={paused ? "Retomar" : "Pausar"}
-          >
-            {paused ? <Play size={13} /> : <Pause size={13} />}
-            {paused ? "Retomar" : "Pausar"}
-          </button>
-        </div>
       </div>
 
       <p className="text-center font-sans text-xs text-muted-foreground mt-4">
