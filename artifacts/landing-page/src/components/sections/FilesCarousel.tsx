@@ -3,12 +3,49 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../ui/SectionWrapper";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const TOTAL = 29;
-const images = Array.from({ length: TOTAL }, (_, i) => ({
-  src: `${import.meta.env.BASE_URL}carousel/${i + 1}.webp`,
-  fallback: `${import.meta.env.BASE_URL}carousel/${i + 1}.png`,
-  label: `Molde ${i + 1}`,
-}));
+import img1 from "@assets/1_1780966100010.png";
+import img2 from "@assets/2_1780966100010.png";
+import img3 from "@assets/3_1780966100010.png";
+import img4 from "@assets/4_1780966100010.png";
+import img5 from "@assets/5_1780966100011.png";
+import img6 from "@assets/6_1780966100011.png";
+import img7 from "@assets/7_1780966100011.png";
+import img8 from "@assets/8_1780966100011.png";
+import img9 from "@assets/9_1780966100011.png";
+import img10 from "@assets/10_1780966100011.png";
+import img11 from "@assets/11_1780966100012.png";
+import img12 from "@assets/12_1780966100012.png";
+import img13 from "@assets/13_1780966100012.png";
+import img14 from "@assets/14_1780966100012.png";
+import img15 from "@assets/15_1780966100009.png";
+import img16 from "@assets/16_1780966100009.png";
+import img17 from "@assets/17_1780966100009.png";
+import img18 from "@assets/18_1780966100009.png";
+import img19 from "@assets/19_1780966100010.png";
+import img20 from "@assets/20_1780966100010.png";
+
+const images = [
+  { src: img1, label: "Molde 1" },
+  { src: img2, label: "Molde 2" },
+  { src: img3, label: "Molde 3" },
+  { src: img4, label: "Molde 4" },
+  { src: img5, label: "Molde 5" },
+  { src: img6, label: "Molde 6" },
+  { src: img7, label: "Molde 7" },
+  { src: img8, label: "Molde 8" },
+  { src: img9, label: "Molde 9" },
+  { src: img10, label: "Molde 10" },
+  { src: img11, label: "Molde 11" },
+  { src: img12, label: "Molde 12" },
+  { src: img13, label: "Molde 13" },
+  { src: img14, label: "Molde 14" },
+  { src: img15, label: "Molde 15" },
+  { src: img16, label: "Molde 16" },
+  { src: img17, label: "Molde 17" },
+  { src: img18, label: "Molde 18" },
+  { src: img19, label: "Molde 19" },
+  { src: img20, label: "Molde 20" },
+];
 
 const CARD_WIDTH = 200;
 const CARD_GAP = 14;
@@ -115,20 +152,14 @@ export function FilesCarousel() {
                   boxShadow: "0 2px 12px rgba(173,103,75,0.09)",
                 }}
               >
-                <picture>
-                  <source srcSet={img.src} type="image/webp" />
-                  <img
-                    src={img.fallback}
-                    alt={img.label}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full object-cover"
-                    style={{ height: 230, display: "block" }}
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = img.fallback;
-                    }}
-                  />
-                </picture>
+                <img
+                  src={img.src}
+                  alt={img.label}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full object-cover"
+                  style={{ height: 230, display: "block" }}
+                />
               </div>
             ))}
           </div>
