@@ -23,6 +23,15 @@ import img17 from "@assets/17_1780966100009.png";
 import img18 from "@assets/18_1780966100009.png";
 import img19 from "@assets/19_1780966100010.png";
 import img20 from "@assets/20_1780966100010.png";
+import img21 from "@assets/21_1780966218638.png";
+import img22 from "@assets/22_1780966218638.png";
+import img23 from "@assets/23_1780966218639.png";
+import img24 from "@assets/24_1780966218639.png";
+import img25 from "@assets/25_1780966218639.png";
+import img26 from "@assets/26_1780966218639.png";
+import img27 from "@assets/27_1780966218639.png";
+import img28 from "@assets/28_1780966218640.png";
+import img29 from "@assets/29_1780966218640.png";
 
 const images = [
   { src: img1, label: "Molde 1" },
@@ -45,6 +54,15 @@ const images = [
   { src: img18, label: "Molde 18" },
   { src: img19, label: "Molde 19" },
   { src: img20, label: "Molde 20" },
+  { src: img21, label: "Molde 21" },
+  { src: img22, label: "Molde 22" },
+  { src: img23, label: "Molde 23" },
+  { src: img24, label: "Molde 24" },
+  { src: img25, label: "Molde 25" },
+  { src: img26, label: "Molde 26" },
+  { src: img27, label: "Molde 27" },
+  { src: img28, label: "Molde 28" },
+  { src: img29, label: "Molde 29" },
 ];
 
 const CARD_WIDTH = 200;
