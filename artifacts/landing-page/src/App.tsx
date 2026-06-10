@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
 import { BackRedirectModal } from "@/components/ui/BackRedirectModal";
-import { PurchaseNotification } from "@/components/ui/PurchaseNotification";
 import { TopBar } from "@/components/sections/TopBar";
 import { HeroSection } from "@/components/sections/HeroSection";
 
@@ -28,7 +27,6 @@ function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
       <BackRedirectModal />
-      <PurchaseNotification />
       <TopBar />
       <div className="pt-9">
         <HeroSection />
