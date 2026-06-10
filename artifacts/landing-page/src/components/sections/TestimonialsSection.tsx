@@ -35,7 +35,7 @@ export function TestimonialsSection() {
       </div>
 
       <div className="flex flex-col items-center gap-6 px-4">
-        <div className="relative w-full max-w-sm mx-auto">
+        <div className="relative w-full max-w-[280px] sm:max-w-xs mx-auto">
           <div
             className="overflow-hidden rounded-2xl"
             style={{
