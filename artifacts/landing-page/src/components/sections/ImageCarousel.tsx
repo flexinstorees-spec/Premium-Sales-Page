@@ -11,7 +11,7 @@ export function ImageCarousel() {
     if (!track) return;
     let pos = 0;
     let raf: number;
-    const speed = 0.6;
+    const speed = 1.8;
 
     const step = () => {
       pos += speed;
