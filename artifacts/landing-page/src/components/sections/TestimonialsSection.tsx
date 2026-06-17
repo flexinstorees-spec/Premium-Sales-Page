@@ -3,18 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionWrapper } from "../ui/SectionWrapper";
 
-import dep1 from "@assets/DEP_1_1781098593610.png";
-import dep2 from "@assets/DEP_2_1781098593610.png";
-import dep3 from "@assets/DEP_3_1781098593609.png";
-import dep4 from "@assets/DEP_4_1781098593609.png";
-import dep5 from "@assets/DEP_5_1781098593610.png";
-
 const testimonials = [
-  { src: dep1, alt: "Depoimento Mariana" },
-  { src: dep2, alt: "Depoimento Patrícia" },
-  { src: dep3, alt: "Depoimento Carla" },
-  { src: dep4, alt: "Depoimento Luciana" },
-  { src: dep5, alt: "Depoimento Sandra" },
+  { src: `${import.meta.env.BASE_URL}testimonials/1.webp`, alt: "Depoimento Mariana" },
+  { src: `${import.meta.env.BASE_URL}testimonials/2.webp`, alt: "Depoimento Patrícia" },
+  { src: `${import.meta.env.BASE_URL}testimonials/3.webp`, alt: "Depoimento Carla" },
+  { src: `${import.meta.env.BASE_URL}testimonials/4.webp`, alt: "Depoimento Luciana" },
+  { src: `${import.meta.env.BASE_URL}testimonials/5.webp`, alt: "Depoimento Sandra" },
 ];
 
 export function TestimonialsSection() {

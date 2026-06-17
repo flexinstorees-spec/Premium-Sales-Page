@@ -2,67 +2,10 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../ui/SectionWrapper";
 
-import img1 from "@assets/1_1780966100010.png";
-import img2 from "@assets/2_1780966100010.png";
-import img3 from "@assets/3_1780966100010.png";
-import img4 from "@assets/4_1780966100010.png";
-import img5 from "@assets/5_1780966100011.png";
-import img6 from "@assets/6_1780966100011.png";
-import img7 from "@assets/7_1780966100011.png";
-import img8 from "@assets/8_1780966100011.png";
-import img9 from "@assets/9_1780966100011.png";
-import img10 from "@assets/10_1780966100011.png";
-import img11 from "@assets/11_1780966100012.png";
-import img12 from "@assets/12_1780966100012.png";
-import img13 from "@assets/13_1780966100012.png";
-import img14 from "@assets/14_1780966100012.png";
-import img15 from "@assets/15_1780966100009.png";
-import img16 from "@assets/16_1780966100009.png";
-import img17 from "@assets/17_1780966100009.png";
-import img18 from "@assets/18_1780966100009.png";
-import img19 from "@assets/19_1780966100010.png";
-import img20 from "@assets/20_1780966100010.png";
-import img21 from "@assets/21_1780966218638.png";
-import img22 from "@assets/22_1780966218638.png";
-import img23 from "@assets/23_1780966218639.png";
-import img24 from "@assets/24_1780966218639.png";
-import img25 from "@assets/25_1780966218639.png";
-import img26 from "@assets/26_1780966218639.png";
-import img27 from "@assets/27_1780966218639.png";
-import img28 from "@assets/28_1780966218640.png";
-import img29 from "@assets/29_1780966218640.png";
-
-const BASE_IMAGES = [
-  { src: img1, label: "Molde 1" },
-  { src: img2, label: "Molde 2" },
-  { src: img3, label: "Molde 3" },
-  { src: img4, label: "Molde 4" },
-  { src: img5, label: "Molde 5" },
-  { src: img6, label: "Molde 6" },
-  { src: img7, label: "Molde 7" },
-  { src: img8, label: "Molde 8" },
-  { src: img9, label: "Molde 9" },
-  { src: img10, label: "Molde 10" },
-  { src: img11, label: "Molde 11" },
-  { src: img12, label: "Molde 12" },
-  { src: img13, label: "Molde 13" },
-  { src: img14, label: "Molde 14" },
-  { src: img15, label: "Molde 15" },
-  { src: img16, label: "Molde 16" },
-  { src: img17, label: "Molde 17" },
-  { src: img18, label: "Molde 18" },
-  { src: img19, label: "Molde 19" },
-  { src: img20, label: "Molde 20" },
-  { src: img21, label: "Molde 21" },
-  { src: img22, label: "Molde 22" },
-  { src: img23, label: "Molde 23" },
-  { src: img24, label: "Molde 24" },
-  { src: img25, label: "Molde 25" },
-  { src: img26, label: "Molde 26" },
-  { src: img27, label: "Molde 27" },
-  { src: img28, label: "Molde 28" },
-  { src: img29, label: "Molde 29" },
-];
+const BASE_IMAGES = Array.from({ length: 29 }, (_, i) => ({
+  src: `${import.meta.env.BASE_URL}files/${i + 1}.webp`,
+  label: `Molde ${i + 1}`,
+}));
 
 const CARD_WIDTH = 200;
 const CARD_GAP = 14;
