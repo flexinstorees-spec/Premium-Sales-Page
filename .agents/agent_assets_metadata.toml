@@ -2,31 +2,7 @@ uploads = []
 generated = []
 
 [[outputs]]
-id = "W85yU-QTwzHh6eqoEpjqe"
-uri = "file://site-netlify.zip"
-type = "unspecified"
-title = "site-netlify.zip — Arraste na Netlify para atualizar"
-
-[[outputs]]
-id = "9Cz0jfAc5aK4CBBbB7ZIz"
+id = "d6S-uYxBwsrt05ScdQ3vW"
 uri = "file://landing-page-netlify.zip"
 type = "unspecified"
-title = "Landing Page — Netlify Deploy"
-
-[[outputs]]
-id = "JP084crxqyhH8WvgNe1oI"
-uri = "file://netlify-deploy.zip"
-type = "unspecified"
-title = "Landing Page Otimizada — Netlify Deploy"
-
-[[outputs]]
-id = "6rFbB1bweWt_NUQV3yLzA"
-uri = "file://moldes-ceramica-netlify.zip"
-type = "unspecified"
-title = "moldes-ceramica-netlify.zip — Deploy Netlify (atualizado)"
-
-[[outputs]]
-id = "JRuwEaUk48wBayDIqA7is"
-uri = "file://landing-page.zip"
-type = "unspecified"
-title = "Landing Page"
+title = "Landing Page — Netlify"
