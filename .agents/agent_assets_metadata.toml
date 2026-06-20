@@ -24,3 +24,9 @@ id = "6rFbB1bweWt_NUQV3yLzA"
 uri = "file://moldes-ceramica-netlify.zip"
 type = "unspecified"
 title = "moldes-ceramica-netlify.zip — Deploy Netlify (atualizado)"
+
+[[outputs]]
+id = "JRuwEaUk48wBayDIqA7is"
+uri = "file://landing-page.zip"
+type = "unspecified"
+title = "Landing Page"
