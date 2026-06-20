@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ShieldCheck, Check, Star } from "lucide-react";
 
-const CHECKOUT_UPSELL = "https://payt.site/GOCkJ9B";
+const CHECKOUT_UPSELL = "https://payt.site/p7CBLre?payment=pix";
 const CHECKOUT_BASICO = "https://pay.wiapy.com/mn8PydQryz";
 
 const upsellItems = [
